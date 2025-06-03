@@ -1,0 +1,14 @@
+name: Docker Build
+
+on: 
+    push:
+        branches: [main]
+
+jobs:
+    docker:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v2
+            - name: Build Docker image
+              run: docker build -t churn-app .
