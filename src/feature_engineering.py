@@ -12,7 +12,7 @@ def encode_and_new(df):
     df["Churn"]=df["Churn"].map({"No":0,"Yes":1})
 
     # One-hot encoding of categorical features
-    categorical_columns=df.select_dtypes(include='object').columns.drop("Churn")
+    categorical_columns=df.select_dtypes(include='object').columns.drop("Churn",errors="ignore")
     df=pd.get_dummies(df,columns=categorical_columns,drop_first=True)
 
     return df
