@@ -28,11 +28,16 @@ st.markdown("Enter Customer Information to predict churn.")
 user_input={}
 input_cols=[col for col in df.columns if col!="Churn"]
 
-for col in input_cols:
-    if df[col].dtype=="object":
-        user_input[col]=st.selectbox(col,df[col].unique())
-    else:
-        user_input[col]-st.number_input(col,value=float(df[col].mean()))
+try:
+    for col in input_cols:
+        if df[col].dtype=="object":
+            user_input[col]=st.selectbox(col,df[col].unique())
+        else:
+            user_input[col]=st.number_input(col,value=float(df[col].mean()))
+
+except KeyError as e:
+    st.error(f"Missing Expected column: {e}")
+    st.stop()
 
 # Converting to DataFrame
 user_df=pd.DataFrame([user_input])
