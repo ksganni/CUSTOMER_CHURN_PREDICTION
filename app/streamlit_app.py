@@ -14,12 +14,13 @@ from app.shap_helper import explain_prediction
 
 # Loading the model
 with open("models/best_model.pkl","rb") as f:
-    model=pickle.load(f)
+    model,reference_columns=pickle.load(f)
 
 # Loading and processing the data
 df=load_data()
-df_encoded=encode_and_new(df)
+df_encoded=encode_and_new(df,reference_columns=None) # Used only for Background SHAP
 
+# Debugging
 print("Unique SeniorCitizen values:",df["SeniorCitizen"].unique())
 print("SeniorCitizen value counts:\n",df["SeniorCitizen"].value_counts())
 
@@ -44,7 +45,9 @@ except KeyError as e:
 
 # Converting to DataFrame
 user_df=pd.DataFrame([user_input])
-user_df_encoded=encode_and_new(pd.concat([df.iloc[:1],user_df],ignore_index=True)).iloc[1:]
+
+# Encoding user input using training-time reference columns
+user_df_encoded=encode_and_new(user_df,reference_columns=reference_columns)
 
 # Predicting
 if st.button("Predict Churn"):
@@ -52,4 +55,5 @@ if st.button("Predict Churn"):
     prob=model.predict_proba(user_df_encoded)[0][1]
     st.markdown(f"### Prediction: {'Churn' if pred else 'No Churn'} ({prob:.2%})")
 
+    # SHAP explanation
     explain_prediction(model,user_df_encoded,df_encoded.sample(100))

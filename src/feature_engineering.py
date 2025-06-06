@@ -3,7 +3,7 @@
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 
-def encode_and_new(df):
+def encode_and_new(df,reference_columns=None):
 
     # Avoiding to modifying original data
     df=df.copy()
@@ -18,6 +18,13 @@ def encode_and_new(df):
     # One-hot encoding of categorical features
     categorical_columns=df.select_dtypes(include='object').columns.drop("Churn",errors="ignore")
     df=pd.get_dummies(df,columns=categorical_columns,drop_first=True)
+
+    # Aligning columns with training features
+    if reference_columns is not None:
+        missing_cols=set(reference_columns)-set(df.columns)
+        for col in missing_cols:
+            df[col]=0
+        df=df[reference_columns]
 
     return df
 
