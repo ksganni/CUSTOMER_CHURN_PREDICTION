@@ -5,11 +5,15 @@ from sklearn.preprocessing import LabelEncoder
 
 def encode_and_new(df):
 
+    # Avoiding to modifying original data
+    df=df.copy()
+
     # Creating new feature: Charges per month
     df["ChargesPerMonth"]=df["TotalCharges"]/(df["tenure"]+1) # +1 to avoid div by 0
 
-    # Labelling encode target variable
-    df["Churn"]=df["Churn"].map({"No":0,"Yes":1})
+    # Encoding target if present
+    if "Churn" in df.columns:
+        df["Churn"]=df["Churn"].map({"No":0,"Yes":1})
 
     # One-hot encoding of categorical features
     categorical_columns=df.select_dtypes(include='object').columns.drop("Churn",errors="ignore")

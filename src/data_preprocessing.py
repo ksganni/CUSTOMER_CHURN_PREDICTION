@@ -17,9 +17,10 @@ def load_data():
     df['TotalCharges']=df['TotalCharges'].fillna(df['MonthlyCharges']*df['tenure'])
 
     # Converting SeniorCitizen from 0/1 to 'No'/'Yes'
-    df['SeniorCitizen'] = df['SeniorCitizen'].map({1: 'Yes', 0: 'No'})
+    if df['SeniorCitizen'].dtype in [int, float]:
+        df['SeniorCitizen'] = df['SeniorCitizen'].map({1: 'Yes', 0: 'No'})
 
-    # Stripping spaces from column names
+    # Stripping extra whitespaces from column names
     df.columns=df.columns.str.strip()
     
     return df
