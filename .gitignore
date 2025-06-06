@@ -5,3 +5,6 @@ venv/
 .ipynb_checkpoints/
 *.DS_Store
 data/unzip_data.py
+build/
+catboost_info/
+.pytest_cache/
