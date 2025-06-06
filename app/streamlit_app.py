@@ -1,5 +1,10 @@
 # Creating a Streamlit app to input customer data, Predict churn using saved model and Display SHAP interpretation
 
+import sys
+import os
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__),'..')))
+
 import streamlit as st
 import pandas as pd
 import pickle
