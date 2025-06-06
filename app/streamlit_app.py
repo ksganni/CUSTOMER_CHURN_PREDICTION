@@ -20,6 +20,9 @@ with open("models/best_model.pkl","rb") as f:
 df=load_data()
 df_encoded=encode_and_new(df)
 
+print("Unique SeniorCitizen values:",df["SeniorCitizen"].unique())
+print("SeniorCitizen value counts:\n",df["SeniorCitizen"].value_counts())
+
 # Building the input form
 st.title("Customer Churn Predictor")
 st.markdown("Enter Customer Information to predict churn.")
