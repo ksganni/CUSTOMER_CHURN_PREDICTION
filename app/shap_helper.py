@@ -3,6 +3,7 @@
 import shap
 import pandas as pd
 import streamlit as st
+import matplotlib.pyplot as plt
 
 def explain_prediction(model,input_df,bg_df):
     explainer=shap.Explainer(model,bg_df)

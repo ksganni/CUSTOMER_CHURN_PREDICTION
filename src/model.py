@@ -32,7 +32,7 @@ def train_models(X_train,y_train):
 
 # Hyperparameter tuning and best model training
 def tune_and_train_best(X_train,y_train):
-    rf=RandomForestClassifier()
+    rf=RandomForestClassifier(random_state=42)
 
     param_grid={
         'n_estimators':[100,150],
@@ -46,8 +46,7 @@ def tune_and_train_best(X_train,y_train):
     best_model=grid.best_estimator_
 
     # Saving both model and column order
-    model_output_path="models/best_model.pkl"
-    with open("model_output_path","wb") as f:
-        pickle.dump((best_model,X_train.columns.tolist()),f)
+    with open("models/best_model.pkl", "wb") as f:
+        pickle.dump((best_model, X_train.columns.tolist()), f)
 
-    return best_model,grid.best_params_
+    return best_model, grid.best_params_
