@@ -34,9 +34,26 @@ def explain_prediction(model, user_df, background_df):
         print("Creating SHAP visualization...")
         st.subheader("🔍 Prediction Explanation")
         
+        # Handle multi-output models (binary classifiers)
+        print(f"SHAP values shape: {shap_values.values.shape}")
+        
         # Create waterfall plot
         fig, ax = plt.subplots(figsize=(10, 6))
-        shap.plots.waterfall(shap_values[0], show=False)
+        
+        # Check if we have multi-output (binary classifier)
+        if len(shap_values.values.shape) > 2:
+            # Multi-output model - use the positive class (index 1)
+            shap.plots.waterfall(shap_values[0, :, 1], show=False)
+            shap_vals_for_df = shap_values.values[0, :, 1]
+        elif shap_values.values.shape[1] > 1:
+            # Binary classifier with 2 outputs - use positive class
+            shap.plots.waterfall(shap_values[0, :, 1], show=False)
+            shap_vals_for_df = shap_values.values[0, :, 1]
+        else:
+            # Single output
+            shap.plots.waterfall(shap_values[0], show=False)
+            shap_vals_for_df = shap_values.values[0]
+        
         st.pyplot(fig)
         plt.close()
         
@@ -45,7 +62,7 @@ def explain_prediction(model, user_df, background_df):
         shap_df = pd.DataFrame({
             'Feature': user_clean.columns,
             'Value': user_clean.iloc[0].values,
-            'SHAP_Value': shap_values.values[0]
+            'SHAP_Value': shap_vals_for_df
         })
         shap_df['Abs_SHAP'] = abs(shap_df['SHAP_Value'])
         shap_df = shap_df.sort_values('Abs_SHAP', ascending=False)
