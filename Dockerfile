@@ -1,5 +1,5 @@
 # Use official Python 3.10 slim image
-FROM python:3.10-slim
+FROM python:3.11-slim
 
 # Set working directory
 WORKDIR /app
@@ -21,4 +21,4 @@ COPY . .
 EXPOSE 8501
 
 # Run the Streamlit app
-CMD ["streamlit", "run", "app/streamlit_app.py", "--server.port=8501", "--server.enableCORS=false"]
+CMD ["streamlit", "run", "streamlit_app.py", "--server.port=8501", "--server.enableCORS=false"]
