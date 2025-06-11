@@ -1,7 +1,6 @@
 # Encoding and adding new features
 
 import pandas as pd
-from sklearn.preprocessing import LabelEncoder
 
 
 def encode_and_new(df, reference_columns=None):

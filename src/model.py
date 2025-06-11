@@ -5,7 +5,6 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import cross_val_score, GridSearchCV
-from sklearn.metrics import roc_auc_score
 from xgboost import XGBClassifier
 from catboost import CatBoostClassifier
 from sklearn.pipeline import make_pipeline
