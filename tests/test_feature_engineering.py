@@ -1,6 +1,7 @@
 from src.feature_engineering import encode_and_new
 import pandas as pd
 
+
 def test_encoding_basic():
     df = pd.DataFrame({
         'gender': ['Male', 'Female'],

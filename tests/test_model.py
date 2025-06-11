@@ -5,6 +5,8 @@ from src.data_preprocessing import load_data
 from src.feature_engineering import encode_and_new
 from sklearn.model_selection import train_test_split
 from imblearn.over_sampling import SMOTE
+import pandas as pd
+
 
 def test_train_models_output_keys():
     df = load_data()
@@ -24,6 +26,7 @@ def test_train_models_output_keys():
         assert "roc_auc_std" in metrics
         # roc_auc_mean should be between 0.5 and 1 (reasonable range)
         assert 0.5 <= metrics["roc_auc_mean"] <= 1.0
+
 
 def test_tune_and_train_best_returns_model_and_params():
     df = load_data()
@@ -48,10 +51,8 @@ def test_tune_and_train_best_returns_model_and_params():
     assert "max_depth" in best_params
     assert "min_samples_split" in best_params
 
-def test_train_models_with_empty_data_raises():
-    import numpy as np
-    import pandas as pd
 
+def test_train_models_with_empty_data_raises():
     # Empty DataFrame inputs
     X_empty = pd.DataFrame()
     y_empty = pd.Series(dtype=int)

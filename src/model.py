@@ -1,16 +1,16 @@
 # Evaluating and training the model
 
-import numpy as np
 import pickle
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import cross_val_score, GridSearchCV
-from sklearn.metrics import (accuracy_score, precision_score, recall_score, f1_score, roc_auc_score, confusion_matrix, classification_report)
+from sklearn.metrics import roc_auc_score
 from xgboost import XGBClassifier
 from catboost import CatBoostClassifier
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
+
 
 def train_models(X_train, y_train):
     models = {
@@ -20,7 +20,7 @@ def train_models(X_train, y_train):
         ),
         "DecisionTree": DecisionTreeClassifier(),
         "RandomForest": RandomForestClassifier(),
-        "XGBoost": XGBClassifier(eval_metric='logloss'),  # Removed use_label_encoder param
+        "XGBoost": XGBClassifier(eval_metric='logloss'),
         "CatBoost": CatBoostClassifier(verbose=0)
     }
 
@@ -34,6 +34,7 @@ def train_models(X_train, y_train):
         }
 
     return results
+
 
 # Hyperparameter tuning and best model training
 def tune_and_train_best(X_train, y_train):
