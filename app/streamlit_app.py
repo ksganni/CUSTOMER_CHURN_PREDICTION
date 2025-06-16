@@ -126,6 +126,21 @@ if selected == "Home":
         # Load the image
         img = Image.open("app/assets/churn.png")
         
+        # Convert to RGBA if not already
+        if img.mode != 'RGBA':
+            img = img.convert('RGBA')
+        
+        # Make the original image semi-transparent
+        img_data = img.getdata()
+        new_data = []
+        for item in img_data:
+            if len(item) == 4:  # RGBA
+                new_data.append((item[0], item[1], item[2], int(item[3] * 0.5)))
+            else:  # RGB
+                new_data.append((item[0], item[1], item[2], int(255 * 0.5)))
+        
+        img.putdata(new_data)
+        
         # Create a drawing context
         draw = ImageDraw.Draw(img)
         
@@ -133,44 +148,96 @@ if selected == "Home":
         img_width, img_height = img.size
         
         # Text to overlay
-        text = "🏠 Customer Churn Prediction App"
+        full_text = "Customer Churn Prediction App"
         
-        # Try to use a nice font, fallback to default if not available
+        # Load font with better sizing logic - prioritize bold fonts
         try:
-            # Bigger font size for more prominence
-            font_size = max(48, img_width // 15)  # Much larger dynamic font sizing
-            font = ImageFont.truetype("arial.ttf", font_size)
-        except:
-            try:
-                # Try other common fonts for bigger text
-                font_size = max(48, img_width // 15)
-                font = ImageFont.truetype("Arial.ttf", font_size)
-            except:
+            # More conservative font size calculation
+            font_size = min(img_width // 15, img_height // 8, 60)  # Cap at 60px
+            
+            # Try bold fonts first for better visibility
+            bold_fonts_to_try = [
+                "arialbd.ttf", "Arial-Bold.ttf", "calibrib.ttf", "Calibri-Bold.ttf",
+                "DejaVuSans-Bold.ttf", "LiberationSans-Bold.ttf"
+            ]
+            
+            # Regular fonts as fallback
+            regular_fonts_to_try = [
+                "arial.ttf", "Arial.ttf", "calibri.ttf", "Calibri.ttf",
+                "DejaVuSans.ttf", "LiberationSans-Regular.ttf"
+            ]
+            
+            main_font = None
+            
+            # Try bold fonts first
+            for font_name in bold_fonts_to_try:
                 try:
-                    font = ImageFont.load_default()
+                    main_font = ImageFont.truetype(font_name, font_size)
+                    break
                 except:
-                    font = None
+                    continue
+            
+            # If no bold font found, try regular fonts
+            if not main_font:
+                for font_name in regular_fonts_to_try:
+                    try:
+                        main_font = ImageFont.truetype(font_name, font_size)
+                        break
+                    except:
+                        continue
+                    
+            # Fallback to default font with size
+            if not main_font:
+                try:
+                    main_font = ImageFont.load_default()
+                except:
+                    main_font = None
+                    
+        except Exception as e:
+            main_font = None
         
-        # Get text dimensions
-        if font:
-            bbox = draw.textbbox((0, 0), text, font=font)
+        # Calculate text positioning more accurately
+        if main_font:
+            # Use textbbox for accurate measurements
+            bbox = draw.textbbox((0, 0), full_text, font=main_font)
             text_width = bbox[2] - bbox[0]
             text_height = bbox[3] - bbox[1]
+            
+            # Account for bbox offset (some fonts have negative offsets)
+            text_offset_x = -bbox[0]  # Adjust for any negative left offset
+            text_offset_y = -bbox[1]  # Adjust for any negative top offset
         else:
-            # Fallback for basic font
-            text_width = len(text) * 10
+            # Fallback measurements
+            text_width = len(full_text) * 12  # Rough estimate
             text_height = 20
+            text_offset_x = 0
+            text_offset_y = 0
         
-        # Position text (centered horizontally, near the top)
-        x = (img_width - text_width) // 2
-        y = img_height // 8  # Position in upper portion of image
+        # Center the text with proper offsets
+        text_x = (img_width - text_width) // 2 + text_offset_x
+        text_y = (img_height - text_height) // 2 + text_offset_y
         
-        # Add black text (big and bold)
-        if font:
-            draw.text((x, y), text, font=font, fill=(0, 0, 0, 255))  # Pure black text
-        else:
-            # Fallback for basic font - still black
-            draw.text((x, y), text, fill=(0, 0, 0, 255))
+        # Ensure text stays within image bounds
+        text_x = max(10, min(text_x, img_width - text_width - 10))
+        text_y = max(10, min(text_y, img_height - text_height - 10))
+        
+        # Add enhanced shadow effect for bold appearance
+        if main_font:
+            # Multiple shadow layers for depth and boldness
+            shadow_offsets = [(3, 3), (2, 2), (1, 1)]
+            shadow_colors = [(0, 0, 0, 100), (0, 0, 0, 120), (0, 0, 0, 140)]
+            
+            # Draw multiple shadow layers
+            for (offset_x, offset_y), shadow_color in zip(shadow_offsets, shadow_colors):
+                draw.text((text_x + offset_x, text_y + offset_y), full_text, font=main_font, fill=shadow_color)
+            
+            # For extra boldness, draw the text multiple times with slight offsets
+            bold_offsets = [(0, 0), (1, 0), (0, 1), (1, 1)]
+            for offset_x, offset_y in bold_offsets:
+                draw.text((text_x + offset_x, text_y + offset_y), full_text, font=main_font, fill=(0, 0, 0, 255))
+        
+        # Main text is already drawn in the shadow section above for boldness
+        # No need to draw again here
         
         # Convert PIL image to bytes for Streamlit
         img_buffer = io.BytesIO()
@@ -187,7 +254,7 @@ if selected == "Home":
         # Fallback: display title without image
         st.title("🏠 Customer Churn Prediction App")
 
-    # Description below the image (without repeating the title)
+    # Description below the image
     st.markdown("""
     ### Welcome to the Customer Churn Prediction App!
     
