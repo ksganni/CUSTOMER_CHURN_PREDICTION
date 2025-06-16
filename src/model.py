@@ -13,12 +13,12 @@ from sklearn.preprocessing import StandardScaler
 
 def train_models(X_train, y_train):
     models = {
-        "LogisticRegression": make_pipeline(
+        "Logistic Regression": make_pipeline(
             StandardScaler(),
             LogisticRegression(max_iter=1000, solver='lbfgs')
         ),
-        "DecisionTree": DecisionTreeClassifier(),
-        "RandomForest": RandomForestClassifier(),
+        "Decision Tree": DecisionTreeClassifier(),
+        "Random Forest": RandomForestClassifier(),
         "XGBoost": XGBClassifier(eval_metric='logloss'),
         "CatBoost": CatBoostClassifier(verbose=0)
     }
@@ -31,6 +31,7 @@ def train_models(X_train, y_train):
             "roc_auc_mean": scores.mean(),
             "roc_auc_std": scores.std()
         }
+        print(f"{name} - AUC: {scores.mean():.4f} ± {scores.std():.4f}")
 
     return results
 
@@ -50,8 +51,11 @@ def tune_and_train_best(X_train, y_train):
 
     best_model = grid.best_estimator_
 
-    # Saving both model and column order
+    # Training and Evaluating All Models
+    tested_models = train_models(X_train, y_train)
+
+    # Saving the Model, Columns, and All Models' Performance
     with open("models/best_model.pkl", "wb") as f:
-        pickle.dump((best_model, X_train.columns.tolist()), f)
+        pickle.dump((best_model, X_train.columns.tolist(), tested_models), f)
 
     return best_model, grid.best_params_
