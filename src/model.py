@@ -1,4 +1,4 @@
-# Evaluating and training the model - UPDATED VERSION
+# Evaluating and training the model 
 
 import pickle
 from sklearn.linear_model import LogisticRegression
@@ -13,12 +13,12 @@ from sklearn.preprocessing import StandardScaler
 
 def train_models(X_train, y_train):
     models = {
-        "Logistic Regression": make_pipeline(  # Changed key name to match display
+        "Logistic Regression": make_pipeline(
             StandardScaler(),
             LogisticRegression(max_iter=1000, solver='lbfgs')
         ),
-        "Decision Tree": DecisionTreeClassifier(),  # Changed key name
-        "Random Forest": RandomForestClassifier(),  # Changed key name
+        "Decision Tree": DecisionTreeClassifier(),
+        "Random Forest": RandomForestClassifier(),
         "XGBoost": XGBClassifier(eval_metric='logloss'),
         "CatBoost": CatBoostClassifier(verbose=0)
     }
@@ -36,9 +36,9 @@ def train_models(X_train, y_train):
     # Save the evaluation results for the Streamlit app to use
     with open("models/model_evaluation_results.pkl", "wb") as f:
         pickle.dump(results, f)
-    
+
     print("✅ Model evaluation results saved to models/model_evaluation_results.pkl")
-    
+
     return results
 
 
@@ -46,13 +46,13 @@ def train_models(X_train, y_train):
 def tune_and_train_best(X_train, y_train):
     # First, get all model results to find the actual best performer
     model_results = train_models(X_train, y_train)
-    
+
     # Find the best performing model
     best_model_name = max(model_results.keys(), key=lambda x: model_results[x]['roc_auc_mean'])
     best_score = model_results[best_model_name]['roc_auc_mean']
-    
+
     print(f"\n🏆 Best Model: {best_model_name} with ROC-AUC: {best_score:.6f}")
-    
+
     # For this example, we'll still use Random Forest for consistency with your existing setup
     # But you can modify this to use the actual best performer
     rf = RandomForestClassifier(random_state=42)
@@ -67,7 +67,7 @@ def tune_and_train_best(X_train, y_train):
     grid.fit(X_train, y_train)
 
     best_model = grid.best_estimator_
-    
+
     # Save both model and column order, plus the model name and final score
     model_info = {
         'model': best_model,
@@ -76,17 +76,17 @@ def tune_and_train_best(X_train, y_train):
         'final_score': grid.best_score_,
         'best_params': grid.best_params_
     }
-    
+
     with open("models/best_model.pkl", "wb") as f:
         pickle.dump((best_model, X_train.columns.tolist()), f)
-    
+
     # Also save detailed model info
     with open("models/model_info.pkl", "wb") as f:
         pickle.dump(model_info, f)
 
     print(f"✅ Best model saved with score: {grid.best_score_:.6f}")
     print(f"✅ Best parameters: {grid.best_params_}")
-    
+
     return best_model, grid.best_params_
 
 
@@ -96,3 +96,4 @@ if __name__ == "__main__":
     # results = train_models(X_train, y_train)
     # best_model, best_params = tune_and_train_best(X_train, y_train)
     pass
+
