@@ -309,12 +309,12 @@ elif selected == "Dataset Viewer":
 # Models Page
 elif selected == "Models":
     st.title("🧩 MODEL PERFORMANCE OVERVIEW")
-    st.markdown("Comparing the performance of different Machine Learning Models tested for churn prediction:")
+    st.markdown("**Comparing the performance of different Machine Learning Models tested for churn prediction:**")
 
     # Checking if we have actual evaluation results
     if model_scores is not None:
-        # Use actual evaluation results
-        st.success("✅ Displaying actual evaluation results from your training session")
+        # Using actual evaluation results
+        st.success("Displaying actual evaluation results from your training session")
         
         # Converting the loaded scores to DataFrame format
         model_names = list(model_scores.keys())
@@ -328,7 +328,7 @@ elif selected == "Models":
         }
     else:
         # Using default/example values with a warning
-        st.warning("⚠️ Using example evaluation results. Run model training to see actual scores.")
+        st.warning("Using example evaluation results. Run model training to see actual scores.")
         model_performance = {
             'Model': [
                 'Logistic Regression',
@@ -343,10 +343,16 @@ elif selected == "Models":
     
     performance_df = pd.DataFrame(model_performance)
     
-    # Displaying performance table
+    # Displaying performance table with pastel yellow highlighting
     st.subheader("📊 Model Comparison")
-    st.dataframe(performance_df.style.highlight_max(axis=0, subset=['ROC-AUC Mean']), 
-                use_container_width=True)
+    
+    # Creating a custom styling function for highlight
+    def highlight_max_pastel_yellow(s):
+        is_max = s == s.max()
+        return ['background-color: #BFD4DB' if v else '' for v in is_max]
+    
+    styled_df = performance_df.style.apply(highlight_max_pastel_yellow, subset=['ROC-AUC Mean'])
+    st.dataframe(styled_df, use_container_width=True)
     
     # Best model highlight
     best_model_idx = performance_df['ROC-AUC Mean'].idxmax()
@@ -356,44 +362,46 @@ elif selected == "Models":
     st.success(f"🏆 **Best Performing Model:** {best_model} with {best_score:.3f} ROC-AUC score")
     
     # Model details
-    st.subheader("📋 Model Details")
+    st.subheader("📋 MODEL DETAILS")
     st.markdown(f"""
     **Selected Model:** {best_model}
     - **ROC-AUC Score:** {best_score:.3f}
     - **Why this model?** {best_model} achieved the highest ROC-AUC score, indicating excellent performance in distinguishing between churning and non-churning customers.
     - **Cross-Validation:** All models were evaluated using 5-fold cross-validation.
     - **Training Features:** {len(reference_columns) if reference_columns else 'N/A'} features
-    
-    **Model Performance Summary:**
+
+    **Models Performance Summary:**
     - **CatBoost:** {performance_df.iloc[4]['ROC-AUC Mean']:.3f} ± {performance_df.iloc[4]['ROC-AUC Std']:.3f}
     - **Random Forest:** {performance_df.iloc[2]['ROC-AUC Mean']:.3f} ± {performance_df.iloc[2]['ROC-AUC Std']:.3f}
     - **XGBoost:** {performance_df.iloc[3]['ROC-AUC Mean']:.3f} ± {performance_df.iloc[3]['ROC-AUC Std']:.3f}
     - **Logistic Regression:** {performance_df.iloc[0]['ROC-AUC Mean']:.3f} ± {performance_df.iloc[0]['ROC-AUC Std']:.3f}
     - **Decision Tree:** {performance_df.iloc[1]['ROC-AUC Mean']:.3f} ± {performance_df.iloc[1]['ROC-AUC Std']:.3f}
     
+    
     **Note:** ROC-AUC (Receiver Operating Characteristic - Area Under Curve) measures the model's ability to distinguish between classes. A score of 1.0 is perfect, while 0.5 is random guessing.
     """)
     
-    # Performance visualization
+    # Performance visualization with pastel yellow
     try:
         import matplotlib.pyplot as plt
         
-        st.subheader("📈 Model Performance Visualization")
+        st.subheader("📈 MODEL PERFORMANCE VISUALIZATION")
         
         fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 6))
         
-        # ROC-AUC comparison with error bars
+        # ROC-AUC comparison with error bars - using pastel yellow for best model
+        colors = ['#FFFACD' if model == best_model else 'lightblue' for model in performance_df['Model']]
         ax1.bar(performance_df['Model'], performance_df['ROC-AUC Mean'], 
-                yerr=performance_df['ROC-AUC Std'], capsize=5, color='skyblue', alpha=0.7)
+                yerr=performance_df['ROC-AUC Std'], capsize=5, color=colors, alpha=0.8)
         ax1.set_title('Model ROC-AUC Comparison (with Standard Deviation)')
         ax1.set_ylabel('ROC-AUC Score')
         ax1.tick_params(axis='x', rotation=45)
         ax1.set_ylim(0.7, 1.0)
         
-        # ROC-AUC ranking
+        # ROC-AUC ranking - using pastel yellow for best model
         sorted_df = performance_df.sort_values('ROC-AUC Mean', ascending=True)
-        colors = ['gold' if model == best_model else 'lightblue' for model in sorted_df['Model']]
-        ax2.barh(sorted_df['Model'], sorted_df['ROC-AUC Mean'], color=colors)
+        colors_ranking = ['#FFFACD' if model == best_model else 'lightblue' for model in sorted_df['Model']]
+        ax2.barh(sorted_df['Model'], sorted_df['ROC-AUC Mean'], color=colors_ranking, alpha=0.8)
         ax2.set_title('Model Ranking by ROC-AUC Score')
         ax2.set_xlabel('ROC-AUC Score')
         ax2.set_xlim(0.7, 1.0)
@@ -406,7 +414,7 @@ elif selected == "Models":
 
 # Predictor Page
 elif selected == "Customer Churn Predictor":
-    st.title("🔍 Customer Churn Predictor")
+    st.title("🔍 CUSTOMER CHURN PREDICTOR")
 
     if model_loaded and model is not None:
         st.success("✅ Model loaded successfully!")
