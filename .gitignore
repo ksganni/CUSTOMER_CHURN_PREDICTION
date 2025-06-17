@@ -9,3 +9,4 @@ build/
 catboost_info/
 .pytest_cache/
 arrow/
+stream.py
