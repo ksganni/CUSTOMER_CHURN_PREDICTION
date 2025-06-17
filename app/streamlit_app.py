@@ -22,7 +22,7 @@ st.set_page_config(page_title="Customer Churn Predictor", layout="wide", page_ic
 with st.sidebar:
     selected = option_menu(
         menu_title="Customer Churn App",
-        options=["Home", "Dataset Viewer", "Models", "Predictor"],
+        options=["Home", "Dataset Viewer", "Models", "Customer Churn Predictor"],
         icons=["house", "table", "layers", "bar-chart"],
         default_index=0,
         orientation="vertical",
@@ -37,7 +37,7 @@ def get_risk_explanation(probability):
     else:
         return "✅ Low risk - Customer is most probably staying."
 
-# Load the model and try to load evaluation results
+# Loading the model and try to load evaluation results
 model_loaded = False
 model_scores = None
 reference_columns = None
@@ -47,7 +47,7 @@ try:
     with open("models/best_model.pkl", "rb") as f:
         loaded_data = pickle.load(f)
         
-        # Handle different formats of saved model
+        # Handling different formats of saved model
         if isinstance(loaded_data, tuple) and len(loaded_data) == 2:
             # New format: (model, reference_columns)
             model, reference_columns = loaded_data
@@ -62,14 +62,14 @@ try:
             reference_columns = None
             st.warning("⚠️ Model loaded but column information not found. Some features may not work properly.")
     
-    # Verify that model has predict method
+    # Verifying that model has predict method
     if not hasattr(model, 'predict'):
         st.error("❌ Loaded object is not a valid model (missing predict method)")
         st.stop()
     
     model_loaded = True
     
-    # Try to load evaluation results if they exist
+    # Trying to load evaluation results if they exist
     try:
         with open("models/model_evaluation_results.pkl", "rb") as f:
             model_scores = pickle.load(f)
@@ -80,11 +80,11 @@ except Exception as e:
     st.error(f"Error loading model: {e}")
     st.stop()
 
-# Load and process dataset
+# Loading and processing dataset
 try:
     df = load_data()
     
-    # Initialize df_encoded
+    # Initializing df_encoded
     df_encoded = None
     
     # Only do encoding if we have reference columns
@@ -107,7 +107,7 @@ try:
     else:
         # If no reference columns, just do basic encoding
         df_encoded = encode_and_new(df, reference_columns=None)
-        # Get reference columns from the encoded data
+        # Getting reference columns from the encoded data
         reference_columns = df_encoded.columns.tolist()
         if 'Churn' in reference_columns:
             reference_columns.remove('Churn')
@@ -118,19 +118,19 @@ except Exception as e:
 
 # Home Page
 if selected == "Home":
-    # Display image with text overlay
+    # Displaying image with text overlay
     try:
         from PIL import Image, ImageDraw, ImageFont
         import io
         
-        # Load the image
+        # Loading the image
         img = Image.open("app/assets/churn.png")
         
-        # Convert to RGBA if not already
+        # Converting to RGBA if not already
         if img.mode != 'RGBA':
             img = img.convert('RGBA')
         
-        # Make the original image semi-transparent
+        # Making the original image semi-transparent
         img_data = img.getdata()
         new_data = []
         for item in img_data:
@@ -141,21 +141,21 @@ if selected == "Home":
         
         img.putdata(new_data)
         
-        # Create a drawing context
+        # Creating a drawing context
         draw = ImageDraw.Draw(img)
         
-        # Get image dimensions
+        # Getting image dimensions
         img_width, img_height = img.size
         
         # Text to overlay
         full_text = "Customer Churn Prediction App"
         
-        # Load font with better sizing logic - prioritize bold fonts
+        # Loading font with better sizing logic - prioritizing bold fonts
         try:
             # More conservative font size calculation
             font_size = min(img_width // 15, img_height // 8, 60)  # Cap at 60px
             
-            # Try bold fonts first for better visibility
+            # Trying bold fonts first for better visibility
             bold_fonts_to_try = [
                 "arialbd.ttf", "Arial-Bold.ttf", "calibrib.ttf", "Calibri-Bold.ttf",
                 "DejaVuSans-Bold.ttf", "LiberationSans-Bold.ttf"
@@ -169,7 +169,7 @@ if selected == "Home":
             
             main_font = None
             
-            # Try bold fonts first
+            # Trying bold fonts first
             for font_name in bold_fonts_to_try:
                 try:
                     main_font = ImageFont.truetype(font_name, font_size)
@@ -196,9 +196,9 @@ if selected == "Home":
         except Exception as e:
             main_font = None
         
-        # Calculate text positioning more accurately
+        # Calculating text positioning more accurately
         if main_font:
-            # Use textbbox for accurate measurements
+            # Using textbbox for accurate measurements
             bbox = draw.textbbox((0, 0), full_text, font=main_font)
             text_width = bbox[2] - bbox[0]
             text_height = bbox[3] - bbox[1]
@@ -217,17 +217,17 @@ if selected == "Home":
         text_x = (img_width - text_width) // 2 + text_offset_x
         text_y = (img_height - text_height) // 2 + text_offset_y
         
-        # Ensure text stays within image bounds
+        # Ensuring text stays within image bounds
         text_x = max(10, min(text_x, img_width - text_width - 10))
         text_y = max(10, min(text_y, img_height - text_height - 10))
         
-        # Add enhanced shadow effect for bold appearance
+        # Adding enhanced shadow effect for bold appearance
         if main_font:
             # Multiple shadow layers for depth and boldness
             shadow_offsets = [(3, 3), (2, 2), (1, 1)]
             shadow_colors = [(0, 0, 0, 100), (0, 0, 0, 120), (0, 0, 0, 140)]
             
-            # Draw multiple shadow layers
+            # Drawing multiple shadow layers
             for (offset_x, offset_y), shadow_color in zip(shadow_offsets, shadow_colors):
                 draw.text((text_x + offset_x, text_y + offset_y), full_text, font=main_font, fill=shadow_color)
             
@@ -236,15 +236,13 @@ if selected == "Home":
             for offset_x, offset_y in bold_offsets:
                 draw.text((text_x + offset_x, text_y + offset_y), full_text, font=main_font, fill=(0, 0, 0, 255))
         
-        # Main text is already drawn in the shadow section above for boldness
-        # No need to draw again here
         
-        # Convert PIL image to bytes for Streamlit
+        # Converting PIL image to bytes for Streamlit
         img_buffer = io.BytesIO()
         img.save(img_buffer, format='PNG')
         img_buffer.seek(0)
         
-        # Display the image
+        # Displaying the image
         st.image(img_buffer, use_container_width=True)
         
     except Exception as e:
@@ -285,7 +283,7 @@ elif selected == "Dataset Viewer":
     with col2:
         st.metric("Features", len(df.columns) - 1)
     with col3:
-        # Fix: Handle both string and numeric Churn columns
+        # Fix: Handling both string and numeric Churn columns
         if 'Churn' in df.columns:
             if df['Churn'].dtype == 'object':
                 # If Churn is string ('Yes'/'No'), count 'Yes' values
@@ -300,7 +298,7 @@ elif selected == "Dataset Viewer":
     with col4:
         st.metric("Data Types", df.dtypes.nunique())
     
-    # Display dataset
+    # Displaying the dataset
     st.subheader("Raw Dataset")
     st.dataframe(df, use_container_width=True)
     
@@ -310,15 +308,15 @@ elif selected == "Dataset Viewer":
 
 # Models Page
 elif selected == "Models":
-    st.title("🧩 Model Performance Overview")
-    st.markdown("Compare the performance of different machine learning models tested for churn prediction.")
+    st.title("🧩 MODEL PERFORMANCE OVERVIEW")
+    st.markdown("Comparing the performance of different Machine Learning Models tested for churn prediction:")
 
-    # Check if we have actual evaluation results
+    # Checking if we have actual evaluation results
     if model_scores is not None:
         # Use actual evaluation results
         st.success("✅ Displaying actual evaluation results from your training session")
         
-        # Convert the loaded scores to DataFrame format
+        # Converting the loaded scores to DataFrame format
         model_names = list(model_scores.keys())
         roc_auc_means = [model_scores[name]['roc_auc_mean'] for name in model_names]
         roc_auc_stds = [model_scores[name]['roc_auc_std'] for name in model_names]
@@ -329,7 +327,7 @@ elif selected == "Models":
             'ROC-AUC Std': roc_auc_stds
         }
     else:
-        # Use default/example values with a warning
+        # Using default/example values with a warning
         st.warning("⚠️ Using example evaluation results. Run model training to see actual scores.")
         model_performance = {
             'Model': [
@@ -345,7 +343,7 @@ elif selected == "Models":
     
     performance_df = pd.DataFrame(model_performance)
     
-    # Display performance table
+    # Displaying performance table
     st.subheader("📊 Model Comparison")
     st.dataframe(performance_df.style.highlight_max(axis=0, subset=['ROC-AUC Mean']), 
                 use_container_width=True)
@@ -362,8 +360,8 @@ elif selected == "Models":
     st.markdown(f"""
     **Selected Model:** {best_model}
     - **ROC-AUC Score:** {best_score:.3f}
-    - **Why this model?** {best_model} achieved the highest ROC-AUC score, indicating excellent performance in distinguishing between churning and non-churning customers
-    - **Cross-Validation:** All models were evaluated using 5-fold cross-validation
+    - **Why this model?** {best_model} achieved the highest ROC-AUC score, indicating excellent performance in distinguishing between churning and non-churning customers.
+    - **Cross-Validation:** All models were evaluated using 5-fold cross-validation.
     - **Training Features:** {len(reference_columns) if reference_columns else 'N/A'} features
     
     **Model Performance Summary:**
@@ -407,7 +405,7 @@ elif selected == "Models":
         st.info("Install matplotlib to see performance visualizations: `pip install matplotlib`")
 
 # Predictor Page
-elif selected == "Predictor":
+elif selected == "Customer Churn Predictor":
     st.title("🔍 Customer Churn Predictor")
 
     if model_loaded and model is not None:
@@ -416,27 +414,50 @@ elif selected == "Predictor":
         st.error("❌ Model failed to load!")
         st.stop()
 
-    st.markdown("### Please enter the Customer Information to predict churn:")
+    st.markdown("### **Please enter the Customer Information to predict churn:**")
 
     user_input = {}
     input_cols = [col for col in df.columns if col != "Churn"]
 
-    # Create input form in columns for better layout
-    col1, col2 = st.columns(2)
-    
+    # Define professional emoji mapping for each column
+    emoji_mapping = {
+        'gender': '👥',
+        'seniorcitizen': '🧓',
+        'partner': '🤝',
+        'dependents': '👨‍👩‍👧‍👦',
+        'tenure': '⏱️',
+        'phoneservice': '📞',
+        'multiplelines': '📱',
+        'internetservice': '🌐',
+        'onlinesecurity': '🔐',
+        'onlinebackup': '☁️',
+        'deviceprotection': '🔧',
+        'techsupport': '🛠️',
+        'streamingtv': '📺',
+        'streamingmovies': '🎬',
+        'contract': '📝',
+        'paperlessbilling': '📧',
+        'paymentmethod': '💳',
+        'monthlycharges': '💵',
+        'totalcharges': '💰'
+    }
+
+    # Creating input form in single column
     try:
-        for i, col in enumerate(input_cols):
-            with col1 if i % 2 == 0 else col2:
-                if df[col].dtype == "object":
-                    user_input[col] = st.selectbox(f"📋 {col}", df[col].unique())
-                else:
-                    min_value = max(0.0, float(df[col].min()))
-                    user_input[col] = st.number_input(
-                        f"🔢 {col}", 
-                        min_value=min_value, 
-                        value=float(df[col].mean()),
-                        help=f"Range: {df[col].min():.2f} - {df[col].max():.2f}"
-                    )
+        for col in input_cols:
+            # Getting appropriate emoji for the column, default to 🔢 for numeric
+            col_emoji = emoji_mapping.get(col.lower(), '🔢')
+            
+            if df[col].dtype == "object":
+                user_input[col] = st.selectbox(f"{col_emoji} {col}", df[col].unique())
+            else:
+                min_value = max(0.0, float(df[col].min()))
+                user_input[col] = st.number_input(
+                    f"{col_emoji} {col}", 
+                    min_value=min_value, 
+                    value=float(df[col].mean()),
+                    help=f"Range: {df[col].min():.2f} - {df[col].max():.2f}"
+                )
     except KeyError as e:
         st.error(f"Missing expected column: {e}")
         st.stop()
@@ -446,17 +467,17 @@ elif selected == "Predictor":
     try:
         user_df_encoded = encode_and_new(user_df, reference_columns=reference_columns)
         
-        # Ensure we have the same columns as the model expects
+        # Ensuring we have the same columns as the model expects
         if reference_columns is not None:
-            # Add missing columns with default values
+            # Adding missing columns with default values
             for col in reference_columns:
                 if col not in user_df_encoded.columns:
                     user_df_encoded[col] = 0
             
-            # Select only the columns the model expects
+            # Selecting only the columns the model expects
             user_df_encoded = user_df_encoded[reference_columns]
         
-        # Convert data types
+        # Converting data types
         for col in user_df_encoded.columns:
             if user_df_encoded[col].dtype == 'object':
                 try:
@@ -491,7 +512,7 @@ elif selected == "Predictor":
                 time.sleep(2)
 
                 try:
-                    # Fix: Ensure model is the actual model object, not a tuple
+                    # Fix: Ensuring model is the actual model object, not a tuple
                     if isinstance(model, tuple):
                         actual_model = model[0] if hasattr(model[0], 'predict') else model
                     else:
@@ -523,7 +544,7 @@ elif selected == "Predictor":
             st.info(f"**Risk Explanation:** {risk_explanation}")
 
             # SHAP explanation
-            st.subheader("🧠 Model Explanation")
+            st.subheader("🔬 Model Explanation")
             try:
                 if reference_columns is not None and df_encoded is not None and len(df_encoded) > 0:
                     background = df_encoded.sample(min(100, len(df_encoded)), random_state=42)
@@ -534,7 +555,7 @@ elif selected == "Predictor":
                     user_df_final = user_df_final.astype('float64')
                     background_final = background_final.astype('float64')
 
-                    # Use the actual model for SHAP
+                    # Using the actual model for SHAP
                     explain_prediction(actual_model, user_df_final, background_final)
                 else:
                     st.info("SHAP explanation not available - missing reference data")

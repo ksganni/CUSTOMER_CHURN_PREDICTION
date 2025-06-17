@@ -37,7 +37,7 @@ def train_models(X_train, y_train):
     with open("models/model_evaluation_results.pkl", "wb") as f:
         pickle.dump(results, f)
 
-    print("✅ Model evaluation results saved to models/model_evaluation_results.pkl")
+    print("Model evaluation results saved to models/model_evaluation_results.pkl")
 
     return results
 
@@ -51,7 +51,7 @@ def tune_and_train_best(X_train, y_train):
     best_model_name = max(model_results.keys(), key=lambda x: model_results[x]['roc_auc_mean'])
     best_score = model_results[best_model_name]['roc_auc_mean']
 
-    print(f"\n🏆 Best Model: {best_model_name} with ROC-AUC: {best_score:.6f}")
+    print(f"\nBest Model: {best_model_name} with ROC-AUC: {best_score:.6f}")
 
     # For this example, we'll still use Random Forest for consistency with your existing setup
     # But you can modify this to use the actual best performer
@@ -84,8 +84,8 @@ def tune_and_train_best(X_train, y_train):
     with open("models/model_info.pkl", "wb") as f:
         pickle.dump(model_info, f)
 
-    print(f"✅ Best model saved with score: {grid.best_score_:.6f}")
-    print(f"✅ Best parameters: {grid.best_params_}")
+    print(f"Best model saved with score: {grid.best_score_:.6f}")
+    print(f"Best parameters: {grid.best_params_}")
 
     return best_model, grid.best_params_
 
