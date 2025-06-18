@@ -10,21 +10,33 @@ from src.feature_engineering import encode_and_new
 from streamlit_option_menu import option_menu
 
 # Import page modules
-from pages import home, dataset, models, predictor
+from page_modules import home, dataset, models, predictor
 
 # Setting the page title and layout
-st.set_page_config(page_title="Customer Churn Predictor", layout="wide",
-page_icon="📊")
+st.set_page_config(page_title="Customer Churn Predictor", layout="wide", page_icon="📊")
+
+# Initialize session state for navigation if not exists
+if 'current_page' not in st.session_state:
+    st.session_state.current_page = "Home"
 
 # Sidebar menu with reordered options
 with st.sidebar:
+    # Add a unique key to prevent conflicts
     selected = option_menu(
         menu_title="Customer Churn App",
         options=["Home", "Dataset Viewer", "Models", "Customer Churn Predictor"],
         icons=["house", "table", "layers", "bar-chart"],
         default_index=0,
         orientation="vertical",
+        key="main_navigation"  # Add unique key
     )
+    
+    # Update session state only if selection changed
+    if selected != st.session_state.current_page:
+        st.session_state.current_page = selected
+        # Clear prediction state when navigating away from predictor
+        if 'prediction_done' in st.session_state and selected != "Customer Churn Predictor":
+            st.session_state.prediction_done = False
 
 # Loading the model and try to load evaluation results
 @st.cache_resource
@@ -105,12 +117,15 @@ def load_model_and_data():
 # Load all data once
 model, model_loaded, model_scores, reference_columns, df, df_encoded = load_model_and_data()
 
+# Use session state for routing to prevent double rendering
+current_page = st.session_state.current_page
+
 # Route to different pages based on selection
-if selected == "Home":
+if current_page == "Home":
     home.show_page()
-elif selected == "Dataset Viewer":
+elif current_page == "Dataset Viewer":
     dataset.show_page(df)
-elif selected == "Models":
+elif current_page == "Models":
     models.show_page(model_scores, reference_columns)
-elif selected == "Customer Churn Predictor":
+elif current_page == "Customer Churn Predictor":
     predictor.show_page(model, model_loaded, reference_columns, df, df_encoded)
