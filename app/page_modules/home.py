@@ -153,13 +153,18 @@ def show_page():
     # About This Platform section
     st.markdown("""
     <div style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 2rem; border-radius: 10px; margin: 2rem 0;">
-        <h3 style="color: #2c3e50; margin-top: 0;">About This Platform</h3>
+        <h3 style="color: #2c3e50;font-weight: 600;">
+        Customer Churn Prediction:
+        </h3>
         <p style="color: #34495e; font-size: 1.1rem; line-height: 1.6;">
-            Customer churn prediction is the process of analyzing customer data 
+            <strong>Customer churn prediction</strong> is the process of analyzing customer data 
             to anticipate which individuals are likely to discontinue using a company's 
             products or services. Accurately predicting churn enables businesses to take proactive 
             measures to retain at-risk customers, reducing customer loss and supporting long-term growth.
         </p>
+        <h3 style="color: #2c3e50;font-weight: 600;">
+        How This Application Works..
+        </h3>
         <p style="color: #34495e; font-size: 1.1rem; line-height: 1.6;">
             This application uses machine learning to predict the likelihood of a telecom customer churning 
             based on their personal profile, subscribed services, and billing patterns. It provides instant, 
@@ -176,17 +181,19 @@ def show_page():
     except Exception as e:
         st.info("Example image not found")
 
+    st.markdown("""<hr style="margin: 2rem 0;">""", unsafe_allow_html=True)
+
     # Key Platform Features header
     st.markdown("""
-    <h3 style="color: #2c3e50; margin-top: 0; border-bottom: 3px solid #3498db; padding-bottom: 0.5rem;">
-        Key Platform Features
+    <h3 style="color: #2c3e50; margin-top: 0; ">
+       📝 KEY SECTIONS
     </h3>
     """, unsafe_allow_html=True)
 
-    # 📊 Dataset Viewer - link removed
+    # 📊 Dataset Viewer
     st.markdown("""
-    <div style="background: linear-gradient(135deg, #e8f4fd 0%, #d6e8f5 100%); padding: 2rem; border-radius: 10px; margin: 2rem 0;">
-        <h3 style="color: #2980b9; margin-top: 0;">📊 Dataset Viewer</h3>
+    <div style="background: linear-gradient(135deg, #e8f4fd 0%, #bde4f4 100%); padding: 2rem; border-radius: 10px; margin: 2rem 0;">
+        <h3 style="color: #2980b9; margin-top: 0;">📊 DATASET</h3>
         <p style="color: #34495e; font-size: 1.1rem; line-height: 1.6;">
             Explore comprehensive customer information and understand churn trends and patterns 
             through interactive visualizations and statistical analysis.
@@ -194,10 +201,10 @@ def show_page():
     </div>
     """, unsafe_allow_html=True)
 
-    # 🤖 Models - link removed
+    # 🤖 Models 
     st.markdown("""
-    <div style="background: linear-gradient(135deg, #e8f5e8 0%, #d4f4d4 100%); padding: 2rem; border-radius: 10px; margin: 2rem 0;">
-        <h3 style="color: #27ae60; margin-top: 0;">🤖 Models</h3>
+    <div style="background: linear-gradient(135deg, #e0f2f1 0%, #a7d8d3 100%); padding: 2rem; border-radius: 10px; margin: 2rem 0;">
+        <h3 style="color: #00695c; margin-top: 0;">🤖 MODELS</h3>
         <p style="color: #34495e; font-size: 1.1rem; line-height: 1.6;">
             Compare different machine learning models and review their performance metrics 
             to identify which algorithms provide the most accurate predictions for your data.
@@ -205,13 +212,16 @@ def show_page():
     </div>
     """, unsafe_allow_html=True)
 
-    # 🎯 Predictor - link removed
+    # 🎯 Predictor 
     st.markdown("""
-    <div style="background: linear-gradient(135deg, #f0e8ff 0%, #e6d3f7 100%); padding: 2rem; border-radius: 10px; margin: 2rem 0;">
-        <h3 style="color: #8e44ad; margin-top: 0;">🎯 Predictor</h3>
+    <div style="background: linear-gradient(135deg, #f0e8ff 0%, #d1c4e9 100%); padding: 2rem; border-radius: 10px; margin: 2rem 0;">
+        <h3 style="color: #8e44ad; margin-top: 0;">🎯 PREDICTOR</h3>
         <p style="color: #34495e; font-size: 1.1rem; line-height: 1.6;">
             Enter customer details to receive instant churn predictions with detailed 
             explanations and actionable insights for customer retention strategies.
         </p>
     </div>
     """, unsafe_allow_html=True)
+
+    st.markdown("""<hr style="margin: 2rem 0;">""", unsafe_allow_html=True)
+

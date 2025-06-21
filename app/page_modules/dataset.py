@@ -3,7 +3,7 @@
 import streamlit as st
 
 def show_page(df):
-    st.title("📂 Dataset Viewer")
+    st.title("📂 DATASET")
     st.markdown("Explore the raw dataset used to train the model.")
     
     # Dataset overview

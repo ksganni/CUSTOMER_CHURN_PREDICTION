@@ -9,10 +9,10 @@ from app.shap_helper import explain_prediction
 
 # Function for classifying churn risk
 def get_risk_explanation(probability):
-    if probability >= 0.7:
+    if probability >= 0.35:
         return "❗High risk - Customer is most probably leaving."
-    elif probability >= 0.4:
-        return "⚠ Medium risk - Customer might leave, monitor closely."
+    elif probability >= 0.20:
+        return "⚠️ Medium risk - Customer might leave, monitor closely."
     else:
         return "✅ Low risk - Customer is most probably staying."
 
@@ -148,7 +148,7 @@ def show_page(model, model_loaded, reference_columns, df, df_encoded):
         with col2:
             st.metric("Churn Probability", f"{prob:.2%}")
         with col3:
-            risk_color = "🔴" if prob >= 0.7 else "🟡" if prob >= 0.4 else "🟢"
+            risk_color = "🔴" if prob >= 0.35 else "🟡" if prob >= 0.20 else "🟢"
             st.metric("Risk Level", f"{risk_color}")
 
         st.info(f"**Risk Explanation:** {risk_explanation}")
