@@ -4,8 +4,19 @@ import streamlit as st
 import pandas as pd
 
 def show_page(model_scores, reference_columns):
-    st.title("🧩 MODEL PERFORMANCE OVERVIEW")
-    st.markdown("**Comparing the performance of different Machine Learning Models tested for churn prediction:**")
+    st.markdown("""
+    <div style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 2rem; border-radius: 10px; margin: 2rem 0;">
+        <h3 style="color: #2c3e50;font-weight: 600;">
+            🧩 MODEL PERFORMANCE OVERVIEW
+        </h3>
+        <p style="color: #34495e; font-size: 1.1rem; line-height: 1.6;">
+            Machine learning models were compared to evaluate their effectiveness in predicting customer churn. 
+            The comparison is based on actual evaluation results from the training process.
+        </p>        
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown("""<hr style="margin: 2rem 0;">""", unsafe_allow_html=True)
     
     # Checking if we have actual evaluation results
     if model_scores is not None:
@@ -52,6 +63,8 @@ def show_page(model_scores, reference_columns):
     best_model = performance_df.iloc[best_model_idx]['Model']
     best_score = performance_df.iloc[best_model_idx]['ROC-AUC Mean']
     st.success(f"🏆 **Best Performing Model:** {best_model} with {best_score:.3f} ROC-AUC score")
+
+    st.markdown("""<hr style="margin: 2rem 0;">""", unsafe_allow_html=True)
     
     # Model details
     st.subheader("📋 MODEL DETAILS")
@@ -74,6 +87,8 @@ def show_page(model_scores, reference_columns):
     the model's ability to distinguish between classes. A score of 1.0 is perfect, while
     0.5 is random guessing.
     """)
+
+    st.markdown("""<hr style="margin: 2rem 0;">""", unsafe_allow_html=True)
     
     # Performance visualization with pastel yellow
     try:
