@@ -24,7 +24,7 @@ with st.sidebar:
     # Add a unique key to prevent conflicts
     selected = option_menu(
         menu_title="Customer Churn App",
-        options=["Home", "Dataset Viewer", "Models", "Customer Churn Predictor"],
+        options=["Home", "Dataset", "Models", "Customer Churn Predictor"],
         icons=["house", "table", "layers", "bar-chart"],
         default_index=0,
         orientation="vertical",
@@ -123,7 +123,7 @@ current_page = st.session_state.current_page
 # Route to different pages based on selection
 if current_page == "Home":
     home.show_page()
-elif current_page == "Dataset Viewer":
+elif current_page == "Dataset":
     dataset.show_page(df)
 elif current_page == "Models":
     models.show_page(model_scores, reference_columns)
