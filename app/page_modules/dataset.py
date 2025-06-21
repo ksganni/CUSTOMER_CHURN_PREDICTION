@@ -1,22 +1,12 @@
-# Dataset Viewer page
+# Dataset Viewer Page
 
 import streamlit as st
 
 def show_page(df):
-    # Styled header
-    st.markdown("""
-    <div style="text-align: center; padding: 2rem; background: linear-gradient(135deg, #e0ecff 0%, #f5f7fa 100%); border-radius: 12px; margin-bottom: 2rem;">
-        <h1 style="color: #2c3e50; margin: 0; font-size: 2.5rem;">
-            📂 Dataset Viewer
-        </h1>
-        <p style="color: #34495e; font-size: 1.2rem; margin: 0.5rem 0 0 0; opacity: 0.9;">
-            Explore the raw dataset used to train the model
-        </p>
-    </div>
-    """, unsafe_allow_html=True)
-
-    # Overview section
-    st.markdown("### <span style='color:black; font-weight:bold;'>📊 Dataset Overview</span>", unsafe_allow_html=True)
+    st.title("📂 Dataset Viewer")
+    st.markdown("Explore the raw dataset used to train the model.")
+    
+    # Dataset overview
     col1, col2, col3, col4 = st.columns(4)
     with col1:
         st.metric("Total Records", len(df))
@@ -34,20 +24,25 @@ def show_page(df):
         st.metric("Churn Rate", f"{churn_rate:.1f}%")
     with col4:
         st.metric("Data Types", df.dtypes.nunique())
-
-    # Raw dataset
-    st.markdown("### <span style='color:black; font-weight:bold;'>📋 Raw Dataset</span>", unsafe_allow_html=True)
-    st.markdown("<p style='color:black; font-weight:bold;'>Complete dataset with all customer records and features used for model training.</p>", unsafe_allow_html=True)
+    
+    # Displaying the dataset
+    st.subheader("Raw Dataset")
     st.dataframe(df, use_container_width=True)
-
-    # Dataset statistics
-    st.markdown("### <span style='color:black; font-weight:bold;'>📈 Dataset Statistics</span>", unsafe_allow_html=True)
-    st.markdown("<p style='color:black; font-weight:bold;'>Statistical summary of numerical features in the dataset.</p>", unsafe_allow_html=True)
+    
+    # Basic statistics
+    st.subheader("Dataset Statistics")
     st.dataframe(df.describe(), use_container_width=True)
 
+    # Add space or a divider before download section
+    st.write("")  # Adds a small space
+    st.write("")  # Add more lines if more space needed
+    st.divider()  # Optional: adds a horizontal line
+
     # Download section
-    st.markdown("### <span style='color:black; font-weight:bold;'>Download Dataset</span>", unsafe_allow_html=True)
-    st.markdown("<p style='color:black; font-weight:bold;'>Download the complete dataset as a CSV file for external analysis.</p>", unsafe_allow_html=True)
+    st.markdown(
+        "<p style='color:black; font-weight:bold;'>Download the complete dataset as a CSV file for external analysis.</p>",
+        unsafe_allow_html=True
+    )
     csv_data = df.to_csv(index=False)
     st.download_button(
         label="📥 Download as CSV",
