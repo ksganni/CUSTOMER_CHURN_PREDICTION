@@ -225,7 +225,7 @@ def show_page():
 
     st.markdown("""<hr style="margin: 2rem 0;">""", unsafe_allow_html=True)
 
-    # 💡 Sample Scenarios to Try
+    # Sample Scenarios to Try
     st.markdown("""
     <h3 style="color: #2c3e50; margin-top: 0; ">
        💡 SAMPLE SCENARIOS TO CHECK CHURN RISK

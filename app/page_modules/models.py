@@ -32,7 +32,7 @@ def show_page(model_scores, reference_columns):
             'ROC-AUC Std': roc_auc_stds
         }
     else:
-        # Using default/example values with a warning
+        # Using example values with a warning
         st.warning("Using example evaluation results. Run model training to see actual scores.")
         model_performance = {
             'Model': [
@@ -58,7 +58,7 @@ def show_page(model_scores, reference_columns):
     styled_df = performance_df.style.apply(highlight_max_pastel_yellow, subset=['ROC-AUC Mean'])
     st.dataframe(styled_df, use_container_width=True)
     
-    # Best model highlight
+    # Best model highlights
     best_model_idx = performance_df['ROC-AUC Mean'].idxmax()
     best_model = performance_df.iloc[best_model_idx]['Model']
     best_score = performance_df.iloc[best_model_idx]['ROC-AUC Mean']
@@ -90,13 +90,13 @@ def show_page(model_scores, reference_columns):
 
     st.markdown("""<hr style="margin: 2rem 0;">""", unsafe_allow_html=True)
     
-    # Performance visualization with pastel yellow
+    # Performance visualization
     try:
         import matplotlib.pyplot as plt
         st.subheader("📈 MODEL PERFORMANCE VISUALIZATION")
         fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 6))
         
-        # ROC-AUC comparison with error bars - using pastel yellow for best model
+        # ROC-AUC comparison with error bars for best model
         colors = ['#FFFACD' if model == best_model else 'lightblue' for model in performance_df['Model']]
         ax1.bar(performance_df['Model'], performance_df['ROC-AUC Mean'],
                yerr=performance_df['ROC-AUC Std'], capsize=5, color=colors, alpha=0.8)
@@ -105,7 +105,7 @@ def show_page(model_scores, reference_columns):
         ax1.tick_params(axis='x', rotation=45)
         ax1.set_ylim(0.7, 1.0)
         
-        # ROC-AUC ranking - using pastel yellow for best model
+        # ROC-AUC ranking for best model
         sorted_df = performance_df.sort_values('ROC-AUC Mean', ascending=True)
         colors_ranking = ['#FFFACD' if model == best_model else 'lightblue' for model in sorted_df['Model']]
         ax2.barh(sorted_df['Model'], sorted_df['ROC-AUC Mean'], color=colors_ranking, alpha=0.8)

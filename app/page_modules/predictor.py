@@ -126,7 +126,7 @@ def show_page(model, model_loaded, reference_columns, df, df_encoded):
 
     st.markdown("""<hr style="margin: 2rem 0;">""", unsafe_allow_html=True)
 
-    # Display prediction results only if prediction_done is True
+    # Displaying prediction results only if prediction_done is True
     if st.session_state.get('prediction_done', False):
         user_df_encoded = st.session_state['user_df_encoded']
         pred = None
@@ -135,7 +135,7 @@ def show_page(model, model_loaded, reference_columns, df, df_encoded):
         actual_model = None
 
         with st.spinner("🔄 Analyzing customer data..."):
-            time.sleep(1)  # Reduced from 10 seconds to 1 second
+            time.sleep(1)  
             try:
                 if isinstance(model, tuple):
                     actual_model = model[0] if hasattr(model[0], 'predict') else model
@@ -188,8 +188,6 @@ def show_page(model, model_loaded, reference_columns, df, df_encoded):
         except Exception as shap_error:
             st.warning("⚠ SHAP explanation failed, but prediction was successful!")
             st.info(f"SHAP Error: {str(shap_error)}")
-
-            st.markdown("""<hr style="margin: 2rem 0;">""", unsafe_allow_html=True)
             
             try:
                 if hasattr(actual_model, 'feature_importances_'):

@@ -9,32 +9,32 @@ from src.data_preprocessing import load_data
 from src.feature_engineering import encode_and_new
 from streamlit_option_menu import option_menu
 
-# Import page modules
+# Importing page modules
 from page_modules import home, dataset, models, predictor
 
 # Setting the page title and layout
 st.set_page_config(page_title="Customer Churn Predictor", layout="wide", page_icon="📊")
 
-# Initialize session state for navigation if not exists
+# Initializing session state for navigation if not exists
 if 'current_page' not in st.session_state:
     st.session_state.current_page = "Home"
 
-# Sidebar menu with reordered options
+# Sidebar menu 
 with st.sidebar:
-    # Add a unique key to prevent conflicts
+    # Adding a unique key to prevent conflicts
     selected = option_menu(
         menu_title="Customer Churn App",
         options=["Home", "Dataset", "Models", "Customer Churn Predictor"],
         icons=["house", "table", "layers", "bar-chart"],
         default_index=0,
         orientation="vertical",
-        key="main_navigation"  # Add unique key
+        key="main_navigation"  # Adding unique key
     )
     
-    # Update session state only if selection changed
+    # Updating session state only if selection changed
     if selected != st.session_state.current_page:
         st.session_state.current_page = selected
-        # Clear prediction state when navigating away from predictor
+        # Clearing prediction state when navigating away from predictor
         if 'prediction_done' in st.session_state and selected != "Customer Churn Predictor":
             st.session_state.prediction_done = False
 
@@ -54,7 +54,7 @@ def load_model_and_data():
             # New format: (model, reference_columns)
             model, reference_columns = loaded_data
         elif isinstance(loaded_data, tuple):
-            # Handle other tuple formats - extract just the model
+            # Handling other tuple formats - extract just the model
             model = loaded_data[0] if hasattr(loaded_data[0], 'predict') else loaded_data
             reference_columns = None
             st.warning("⚠ Model loaded but column information not found. Some features may not work properly.")
@@ -114,13 +114,13 @@ def load_model_and_data():
     
     return model, model_loaded, model_scores, reference_columns, df, df_encoded
 
-# Load all data once
+# Loading all data once
 model, model_loaded, model_scores, reference_columns, df, df_encoded = load_model_and_data()
 
-# Use session state for routing to prevent double rendering
+# Using session state for routing to prevent double rendering
 current_page = st.session_state.current_page
 
-# Route to different pages based on selection
+# Routing to different pages based on selection
 if current_page == "Home":
     home.show_page()
 elif current_page == "Dataset":
