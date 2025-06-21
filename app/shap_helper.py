@@ -94,10 +94,14 @@ def explain_prediction(model, user_df, background_df):
         # Creating visualizations
         create_simple_shap_plot(base_value, values, feature_names, feature_values)
         
+        st.markdown("""<hr style="margin: 2rem 0;">""", unsafe_allow_html=True)
+
         # Feature contributions table
         st.subheader("⚖️ Feature Contributions")
         shap_df = create_shap_dataframe(values, feature_names, feature_values)
         st.dataframe(shap_df.head(15), use_container_width=True)
+        
+        st.markdown("""<hr style="margin: 2rem 0;">""", unsafe_allow_html=True)
         
         # Summary statistics
         create_shap_summary_stats(shap_df, base_value)

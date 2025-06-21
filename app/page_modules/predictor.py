@@ -23,7 +23,18 @@ def validate_inputs(data):
     return True, "All inputs are valid."
 
 def show_page(model, model_loaded, reference_columns, df, df_encoded):
-    st.title("🔍 CUSTOMER CHURN PREDICTOR")
+    st.markdown("""
+    <div style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 2rem; border-radius: 10px; margin: 2rem 0;">
+        <h3 style="color: #2c3e50;font-weight: 600;">
+            🔍 CUSTOMER CHURN PREDICTOR
+        </h3>
+        <p style="color: #34495e; font-size: 1.1rem; line-height: 1.6;">
+            Predicts the likelihood of customer churn based on provided details and highlights key factors driving the prediction.
+        </p>        
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown("""<hr style="margin: 2rem 0;">""", unsafe_allow_html=True)
 
     if model_loaded and model is not None:
         st.success("✅ Model loaded successfully!")
@@ -113,6 +124,8 @@ def show_page(model, model_loaded, reference_columns, df, df_encoded):
             st.session_state['prediction_done'] = True
             st.session_state['user_df_encoded'] = user_df_encoded
 
+    st.markdown("""<hr style="margin: 2rem 0;">""", unsafe_allow_html=True)
+
     # Display prediction results only if prediction_done is True
     if st.session_state.get('prediction_done', False):
         user_df_encoded = st.session_state['user_df_encoded']
@@ -141,6 +154,8 @@ def show_page(model, model_loaded, reference_columns, df, df_encoded):
 
         st.success("✅ Prediction completed successfully!")
 
+        st.markdown("""<hr style="margin: 2rem 0;">""", unsafe_allow_html=True)
+
         st.subheader("🎯 Prediction Results")
         col1, col2, col3 = st.columns(3)
         with col1:
@@ -153,7 +168,12 @@ def show_page(model, model_loaded, reference_columns, df, df_encoded):
 
         st.info(f"**Risk Explanation:** {risk_explanation}")
 
+        st.markdown("""<hr style="margin: 2rem 0;">""", unsafe_allow_html=True)
+
         st.subheader("🔬 Model Explanation")
+
+        st.markdown("""<hr style="margin: 2rem 0;">""", unsafe_allow_html=True)
+
         try:
             if reference_columns is not None and df_encoded is not None and len(df_encoded) > 0:
                 background = df_encoded.sample(min(100, len(df_encoded)), random_state=42)
@@ -168,6 +188,9 @@ def show_page(model, model_loaded, reference_columns, df, df_encoded):
         except Exception as shap_error:
             st.warning("⚠ SHAP explanation failed, but prediction was successful!")
             st.info(f"SHAP Error: {str(shap_error)}")
+
+            st.markdown("""<hr style="margin: 2rem 0;">""", unsafe_allow_html=True)
+            
             try:
                 if hasattr(actual_model, 'feature_importances_'):
                     st.subheader("📊 Feature Importance (Alternative)")
