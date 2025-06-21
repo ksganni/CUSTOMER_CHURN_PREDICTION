@@ -225,3 +225,91 @@ def show_page():
 
     st.markdown("""<hr style="margin: 2rem 0;">""", unsafe_allow_html=True)
 
+    # 💡 Sample Scenarios to Try
+    st.markdown("""
+    <h3 style="color: #2c3e50; margin-top: 0; ">
+       💡 SAMPLE SCENARIOS TO CHECK CHURN RISK
+    </h3>
+    """, unsafe_allow_html=True)
+
+    
+    st.markdown("""
+    <div style="background: linear-gradient(135deg, #ffebee 0%, #ffeaec 100%); padding: 2rem; border-radius: 10px; margin: 2rem 0;">
+        <h4 style="color: #c0392b; margin-bottom: 0.5rem;">High Risk: Short-Term Customer Overpaying</h4>
+        <ul>
+            <li>Gender: Female</li>
+            <li>Senior Citizen: Yes</li>
+            <li>Partner: No</li>
+            <li>Dependents: No</li>
+            <li>Tenure: 5 months</li>
+            <li>Phone Service: Yes</li>
+            <li>Multiple Lines: Yes</li>
+            <li>Internet Service: Fiber Optic</li>
+            <li>Online Security: No</li>
+            <li>Online Backup: No</li>
+            <li>Device Protection: No</li>
+            <li>Tech Support: No</li>
+            <li>Streaming TV: No</li>
+            <li>Streaming Movies: No</li>
+            <li>Contract: Month-to-Month</li>
+            <li>Paperless Billing: No</li>
+            <li>Payment Method: Mailed Check</li>
+            <li>Monthly Charges: $95.00</li>
+            <li>Total Charges: $475.00</li>
+        </ul>
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown("""
+    <div style="background: linear-gradient(135deg, #fffde7 0%, #fffae0 100%); padding: 2rem; border-radius: 10px; margin: 2rem 0;">
+        <h4 style="color: #f39c12; margin-bottom: 0.5rem;">Medium Risk: Moderate Tenure with Some Stability</h4>
+        <ul>
+            <li>Gender: Female</li>
+            <li>Senior Citizen: No</li>
+            <li>Partner: Yes</li>
+            <li>Dependents: No</li>
+            <li>Tenure: 15 months</li>
+            <li>Phone Service: Yes</li>
+            <li>Multiple Lines: Yes</li>
+            <li>Internet Service: Fiber Optic</li>
+            <li>Online Security: No</li>
+            <li>Online Backup: Yes</li>
+            <li>Device Protection: No</li>
+            <li>Tech Support: No</li>
+            <li>Streaming TV: Yes</li>
+            <li>Streaming Movies: No</li>
+            <li>Contract: Month-to-Month</li>
+            <li>Paperless Billing: Yes</li>
+            <li>Payment Method: Credit Card(Automatic)</li>
+            <li>Monthly Charges: $78.90</li>
+            <li>Total Charges: $1,183.50</li>
+        </ul>
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown("""
+    <div style="background: linear-gradient(135deg, #e8f5e8 0%, #e5f2e5 100%); padding: 2rem; border-radius: 10px; margin: 2rem 0;">
+        <h4 style="color: #27ae60; margin-bottom: 0.5rem;">Low Risk: Ultra Long-Term Loyal Customer</h4>
+        <ul>
+            <li>Gender: Male</li>
+            <li>Senior Citizen: No</li>
+            <li>Partner: Yes</li>
+            <li>Dependents: Yes</li>
+            <li>Tenure: 36 months</li>
+            <li>Phone Service: Yes</li>
+            <li>Multiple Lines: Yes</li>
+            <li>Internet Service: DSL</li>
+            <li>Online Security: Yes</li>
+            <li>Online Backup: Yes</li>
+            <li>Device Protection: Yes</li>
+            <li>Tech Support: Yes</li>
+            <li>Streaming TV: No</li>
+            <li>Streaming Movies: Yes</li>
+            <li>Contract: Two Years</li>
+            <li>Paperless Billing: Yes</li>
+            <li>Payment Method: Credit Card(Automatic)</li>
+            <li>Monthly Charges: $72.40</li>
+            <li>Total Charges: $2,606.40</li>
+        </ul>
+    </div>
+    """, unsafe_allow_html=True)
