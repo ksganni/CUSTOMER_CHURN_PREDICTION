@@ -7,7 +7,7 @@ def show_page(model_scores, reference_columns):
     st.markdown("""
     <div style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 2rem; border-radius: 10px; margin: 2rem 0;">
         <h3 style="color: #2c3e50;font-weight: 600;">
-            🧩 MODEL PERFORMANCE OVERVIEW
+            🧩 Model Performance Overview
         </h3>
         <p style="color: #34495e; font-size: 1.1rem; line-height: 1.6;">
             Machine learning models were compared to evaluate their effectiveness in predicting customer churn. 
@@ -51,11 +51,11 @@ def show_page(model_scores, reference_columns):
     # Displaying performance table with pastel yellow highlighting
     st.subheader("📊 Model Comparison")
     # Creating a custom styling function for highlight
-    def highlight_max_pastel_yellow(s):
+    def highlight(s):
         is_max = s == s.max()
-        return ['background-color: #BFD4DB' if v else '' for v in is_max]
+        return ['background-color: #a2bffe' if v else '' for v in is_max]
     
-    styled_df = performance_df.style.apply(highlight_max_pastel_yellow, subset=['ROC-AUC Mean'])
+    styled_df = performance_df.style.apply(highlight, subset=['ROC-AUC Mean'])
     st.dataframe(styled_df, use_container_width=True)
     
     # Best model highlights

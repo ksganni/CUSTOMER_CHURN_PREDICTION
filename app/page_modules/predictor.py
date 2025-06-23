@@ -23,24 +23,13 @@ def validate_inputs(data):
     return True, "All inputs are valid."
 
 def show_page(model, model_loaded, reference_columns, df, df_encoded):
-    st.markdown("""
-    <div style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 2rem; border-radius: 10px; margin: 2rem 0;">
-        <h3 style="color: #2c3e50;font-weight: 600;">
-            🔍 CUSTOMER CHURN PREDICTOR
-        </h3>
-        <p style="color: #34495e; font-size: 1.1rem; line-height: 1.6;">
-            Predicts the likelihood of customer churn based on provided details and highlights key factors driving the prediction.
-        </p>        
-    </div>
-    """, unsafe_allow_html=True)
-
-    st.markdown("""<hr style="margin: 2rem 0;">""", unsafe_allow_html=True)
-
     if model_loaded and model is not None:
         st.success("✅ Model loaded successfully!")
     else:
         st.error("❌ Model failed to load!")
         st.stop()
+    
+    st.markdown("""<hr style="margin: 2rem 0;">""", unsafe_allow_html=True)
 
     st.markdown("### **Please enter the Customer Information to predict churn:**")
 

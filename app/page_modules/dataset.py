@@ -6,7 +6,7 @@ def show_page(df):
     st.markdown("""
     <div style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 2rem; border-radius: 10px; margin: 2rem 0;">
         <h3 style="color: #2c3e50;font-weight: 600;">
-            📂 ABOUT THE DATASET
+            📂 About The Dataset
         </h3>
         <p style="color: #34495e; font-size: 1.1rem; line-height: 1.6;">
             This dataset contains detailed information about telecom customers, including their service subscriptions, 
