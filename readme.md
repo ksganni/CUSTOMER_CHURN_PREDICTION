@@ -23,12 +23,12 @@ Customer churn refers to customers stopping use of a company's services or produ
 
 ## 🎯 Problem Statement
 
-Telecom companies face significant revenue loss due to churn. This project addresses the challenge by:
-✅ Analyzing customer behavior patterns
-✅ Building predictive models to forecast churn
-✅ Providing explanations for why customers might leave
-✅ Creating an interactive prediction tool for business users
-✅ Offering actionable insights to help retention teams focus their efforts
+Telecom companies face significant revenue loss due to churn. This project addresses the challenge by:  
+✅ Analyzing customer behavior patterns  
+✅ Building predictive models to forecast churn  
+✅ Providing explanations for why customers might leave  
+✅ Creating an interactive prediction tool for business users  
+✅ Offering actionable insights to help retention teams focus their efforts  
 
 **Our goal:** Predict churn and explain each prediction using machine learning.
 
