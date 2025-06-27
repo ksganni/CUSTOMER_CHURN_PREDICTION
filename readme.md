@@ -36,10 +36,10 @@ Telecom companies face significant revenue loss due to churn. This project addre
 
 #### Data Source:
 
-**📥 Dataset:** Telco Customer Churn Dataset from Kaggle
-**📄 Format:** CSV file
-**🎯 Target:** Churn column (Yes/No)
-**📝 Link:** [Telco Customer Churn Dataset](https://www.kaggle.com/datasets/blastchar/telco-customer-churn/data)
+**📥 Dataset:** Telco Customer Churn Dataset from Kaggle  
+**📄 Format:** CSV file  
+**🎯 Target:** Churn column (Yes/No)  
+**📝 Link:** [Telco Customer Churn Dataset](https://www.kaggle.com/datasets/blastchar/telco-customer-churn/data)  
 
 #### Feature Categories:
 
@@ -192,23 +192,23 @@ Becomes: Contract_Month-to-month = 1, Contract_One_year = 0, Contract_Two_year =
 
 **Models Tested**
 
-**1. Logistic Regression**
+1. **Logistic Regression**  
     - Simple, interpretable model
     - Good baseline for binary classification
     - Fast training and prediction
-**2. Decision Tree**
+2. **Decision Tree**
     - Easy to understand decision rules
     - Can capture non-linear relationships
     - Prone to overfitting
-**3. Random Forest**
+3. **Random Forest**
     - Combines multiple decision trees
     - Reduces overfitting through ensemble learning
     - Provides feature importance rankings
-**4. XGBoost (Extreme Gradient Boosting)**
+4. **XGBoost (Extreme Gradient Boosting)**
     - Advanced boosting algorithm
     - Excellent performance on structured data
     - Handles missing values automatically
-**5. CatBoost (Categorical Boosting)**
+5. **CatBoost (Categorical Boosting)**
     - Specialized for categorical features
     - Reduces need for extensive preprocessing
     - Built-in overfitting protection
