@@ -4,16 +4,11 @@ A comprehensive machine learning project that predicts whether telecom customers
 
 **✨ Key features include:**
 
-🧹 Data cleaning and feature engineering
-
-🤖 Machine learning model training and evaluation
-
-🪄 Prediction with explainability using SHAP
-
-🌐 A user-friendly web interface built with Streamlit
-
-✅ Automated testing and CI with GitHub Actions
-
+🧹 Data cleaning and feature engineering  
+🤖 Machine learning model training and evaluation  
+🪄 Prediction with explainability using SHAP  
+🌐 A user-friendly web interface built with Streamlit  
+✅ Automated testing and CI with GitHub Actions  
 🐳 Docker containerization for deployment
 
 
