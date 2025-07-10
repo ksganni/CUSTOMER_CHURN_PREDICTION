@@ -2,15 +2,15 @@
 
 <div align="center">
 
-[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Visit_App-blue?style=for-the-badge)](https://customer-churn-prediction-8hui.onrender.com/)
-[![Python](https://img.shields.io/badge/Python-3.8+-blue?style=flat-square&logo=python)](https://www.python.org/)
-[![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit)](https://streamlit.io/)
-[![Machine Learning](https://img.shields.io/badge/ML-Scikit--Learn-orange?style=flat-square)](https://scikit-learn.org/)
-[![Docker](https://img.shields.io/badge/Docker-Ready-blue?style=flat-square&logo=docker)](https://www.docker.com/)
+[![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)](https://streamlit.io/)
+[![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
+[![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)](https://www.docker.com/)
+[![Render](https://img.shields.io/badge/Render-46E3B7?style=flat-square&logo=render&logoColor=white)](https://render.com/)
 
 **A comprehensive machine learning project that predicts whether telecom customers are likely to cancel their service (churn). This solution helps businesses identify at-risk customers and take proactive measures to retain them, ultimately reducing customer loss and boosting profitability.**
 
-[🚀 Try the Live Demo](https://customer-churn-prediction-8hui.onrender.com/) | [📊 View Dataset](https://www.kaggle.com/datasets/blastchar/telco-customer-churn/data) | [📖 Documentation](#documentation)
+🚀 **[Try the Live Demo](https://customer-churn-prediction-8hui.onrender.com/)**
 
 </div>
 
@@ -20,7 +20,6 @@
 
 - [✨ Key Features](#-key-features)
 - [🎯 Problem Statement](#-problem-statement)
-- [🚀 Live Demo](#-live-demo)
 - [📊 Data Overview](#-data-overview)
 - [🗂️ Project Structure](#️-project-structure)
 - [⚙️ Technical Implementation](#️-technical-implementation)
@@ -81,37 +80,6 @@ Telecom companies face significant revenue loss due to churn. This project addre
 ✅ **Offering actionable insights to help retention teams focus their efforts**
 
 **Our goal:** Predict churn and explain each prediction using machine learning.
-
----
-
-## 🚀 Live Demo
-
-### 🌐 **[Try the Application Now!](https://customer-churn-prediction-8hui.onrender.com/)**
-
-### 📱 Application Screenshots
-
-#### 🏠 **About Page**
-![About Page](screenshots/about_page.png)
-
-**Customer Churn Prediction:** Customer churn prediction is the process of analyzing customer data to anticipate which individuals are likely to discontinue using a company's products or services. Accurately predicting churn enables businesses to take proactive measures to retain at-risk customers, reducing customer loss and supporting long-term growth.
-
-**How This Application Works:** This application predicts whether a telecom customer is likely to churn based on their personal details, subscribed services, and billing information. By analyzing the customer's profile, it provides an instant churn probability along with a risk level: Low, Medium, or High.
-
-Once you enter the customer's details and click **"Predict Churn"**, the app calculates the churn likelihood using a trained machine learning model. It also explains the prediction by showing which features most influenced the result, using easy-to-understand charts and tables. This helps businesses quickly identify at-risk customers and take action to improve retention.
-
-**📝 Key Sections:**
-- **📊 Dataset:** Explore comprehensive customer information and understand churn trends and patterns through interactive visualizations and statistical analysis.
-- **🤖 Models:** Compare different machine learning models and review their performance metrics to identify which algorithms provide the most accurate predictions for your data.
-- **🎯 Predictor:** Enter customer details to receive instant churn predictions with detailed explanations and actionable insights for customer retention strategies.
-
-#### 📊 **Dataset Page**
-![Dataset Page](screenshots/dataset_page.png)
-
-#### 🤖 **Models Page**
-![Models Page](screenshots/models_page.png)
-
-#### 🎯 **Predictor Page**
-![Predictor Page](screenshots/predictor_page.png)
 
 ---
 
@@ -337,7 +305,7 @@ Top factors decreasing churn risk:
 
 ```bash
 # Clone the repository
-git clone https://github.com/ksganni/CUSTOMER_CHURN_PREDICTION.git
+git clone https://github.com/yourusername/Customer-Churn-Prediction.git
 cd Customer-Churn-Prediction
 
 # Build and run with Docker
@@ -362,6 +330,19 @@ pip install -r requirements.txt
 # Run the application
 streamlit run App/streamlit_app.py
 ```
+
+### 🚀 **Option 3: Deploy to Render**
+
+1. **Fork this repository** to your GitHub account
+2. **Connect to Render:**
+   - Go to [Render.com](https://render.com) and sign up
+   - Click "New +" and select "Web Service"
+   - Connect your GitHub repository
+3. **Configure deployment:**
+   - **Build Command:** `pip install -r requirements.txt`
+   - **Start Command:** `streamlit run App/streamlit_app.py --server.port $PORT --server.address 0.0.0.0`
+   - **Environment:** Python 3.8+
+4. **Deploy** and your app will be live!
 
 ### 📋 **Requirements**
 
@@ -481,6 +462,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **SHAP:** For model explainability
 - **Streamlit:** For the web application framework
 - **Scikit-learn:** For machine learning algorithms
+- **Render:** For reliable cloud deployment
 
 ---
 
