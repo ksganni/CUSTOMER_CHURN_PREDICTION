@@ -268,11 +268,21 @@ Customer-Churn-Prediction/
   - ROC-AUC > 0.8: Generally considered good performance
 
 **🏆 Model Selection Results:**
-Random Forest was selected as the best model with:
-- **ROC-AUC Score:** 0.847 (excellent performance)
-- **Consistency:** Stable performance across different data splits
-- **Interpretability:** Provides clear feature importance rankings
-- **Robustness:** Less prone to overfitting than single decision trees
+
+**Selected Model:** CatBoost
+- **ROC-AUC Score:** 0.932 (outstanding performance)
+- **Why this model?** CatBoost achieved the highest ROC-AUC score, indicating excellent performance in distinguishing between churning and non-churning customers
+- **Cross-Validation:** All models were evaluated using 5-fold cross-validation
+- **Training Features:** 31 features
+
+**Models Performance Summary:**
+- **CatBoost:** 0.932 ± 0.053
+- **Random Forest:** 0.931 ± 0.043
+- **XGBoost:** 0.930 ± 0.058
+- **Logistic Regression:** 0.917 ± 0.062
+- **Decision Tree:** 0.790 ± 0.064
+
+**Note:** ROC-AUC (Receiver Operating Characteristic - Area Under Curve) measures the model's ability to distinguish between classes. A score of 1.0 is perfect, while 0.5 is random guessing.
 
 ### 5️⃣ **Model Explanation with SHAP** (`App/shap_helper.py`)
 
@@ -305,7 +315,7 @@ Top factors decreasing churn risk:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/Customer-Churn-Prediction.git
+git clone https://github.com/ksganni/Customer-Churn-Prediction.git
 cd Customer-Churn-Prediction
 
 # Build and run with Docker
@@ -317,7 +327,7 @@ docker run -p 8501:8501 churn-prediction
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/Customer-Churn-Prediction.git
+git clone https://github.com/ksganni/Customer-Churn-Prediction.git
 cd Customer-Churn-Prediction
 
 # Create virtual environment
@@ -470,8 +480,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **⭐ Star this repository if you found it helpful!**
 
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/Customer-Churn-Prediction?style=social)](https://github.com/yourusername/Customer-Churn-Prediction/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/yourusername/Customer-Churn-Prediction?style=social)](https://github.com/yourusername/Customer-Churn-Prediction/network/members)
+[![GitHub stars](https://img.shields.io/github/stars/ksganni/Customer-Churn-Prediction?style=social)](https://github.com/ksganni/Customer-Churn-Prediction/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/ksganni/Customer-Churn-Prediction?style=social)](https://github.com/ksganni/Customer-Churn-Prediction/network/members)
 
 **Made with ❤️ and ☕**
 
