@@ -40,7 +40,7 @@
 </tr>
 <tr>
 <td align="center">🤖</td>
-<td><strong>Machine Learning Models</strong><br/>Multiple algorithms with performance comparison</td>
+<td><strong>Machine learning model training and evaluation</strong><br/>Multiple algorithms with performance comparison</td>
 </tr>
 <tr>
 <td align="center">🪄</td>
