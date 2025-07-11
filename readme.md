@@ -252,13 +252,23 @@ Customer-Churn-Prediction/
 
 **🤖 Models Tested:**
 
-| Model | Description | Strengths |
-|-------|-------------|-----------|
-| **Logistic Regression** | Simple, interpretable model | Fast training, good baseline |
-| **Decision Tree** | Rule-based decisions | Easy to understand, captures non-linear patterns |
-| **Random Forest** | Ensemble of decision trees | Reduces overfitting, provides feature importance |
-| **XGBoost** | Gradient boosting | Excellent performance, handles missing values |
-| **CatBoost** | Categorical boosting | Specialized for categorical features |
+| Model | Description|
+|-------|-------------|
+| **Logistic Regression** | - Simple, interpretable model
+    - Good baseline for binary classification
+    - Fast training and prediction | 
+| **Decision Tree** | - Easy to understand decision rules
+    - Can capture non-linear relationships
+    - Prone to overfitting | 
+| **Random Forest** | - Combines multiple decision trees
+    - Reduces overfitting through ensemble learning
+    - Provides feature importance rankings | 
+| **XGBoost** | - Advanced boosting algorithm
+    - Excellent performance on structured data
+    - Handles missing values automatically | 
+| **CatBoost** | - Specialized for categorical features
+    - Reduces need for extensive preprocessing
+    - Built-in overfitting protection | 
 
 **📊 Model Evaluation Process:**
 - **Cross-validation:** 5-fold cross-validation ensures robust performance estimates
