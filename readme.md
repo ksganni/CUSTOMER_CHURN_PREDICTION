@@ -19,6 +19,7 @@
 ## 📋 Table of Contents
 
 - [✨ Key Features](#-key-features)
+- [📸 App Screenshots]
 - [🎯 Problem Statement](#-problem-statement)
 - [📊 Data Overview](#-data-overview)
 - [🗂️ Project Structure](#️-project-structure)
@@ -68,6 +69,27 @@
 Customer churn refers to customers stopping use of a company's services or products. In telecom, this means customers canceling phone, internet, or cable services and switching to competitors.
 
 ---
+
+## 📸 App Screenshots
+
+<div align="center">
+
+### 🏠 **Homepage & Project Overview**
+
+### 📊 **Dataset Exploration**
+
+### 🤖 **Model Performance Comparison**
+
+### 🔮 **Prediction Interface**
+
+### Examples
+
+❗ **High Risk: New Month-to-Month Customer with High Charges
+
+⚠️ **Medium Risk: Long-Term Customer with Full Services
+
+✅ **Low Risk: Stable Family Customer
+
 
 ## 🎯 Problem Statement
 
