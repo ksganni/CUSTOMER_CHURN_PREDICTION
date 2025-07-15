@@ -76,24 +76,7 @@ Customer churn refers to customers stopping use of a company's services or produ
 
 ### 🏠 **Homepage & Project Overview**
 
-<img width="1438" height="688" alt="Screenshot 2025-07-09 at 3 52 14 PM" src="https://github.com/user-attachments/assets/869c4539-46d2-4c26-876a-d5452ac8880e" />
-
-<img width="1439" height="625" alt="Screenshot 2025-07-09 at 3 54 27 PM" src="https://github.com/user-attachments/assets/86541324-eb29-4472-a5b2-c9fcab1f5908" />
-
-<img width="1438" height="119" alt="Screenshot 2025-07-09 at 3 53 56 PM" src="https://github.com/user-attachments/assets/da0e398e-554e-4608-b17c-5e92da5fe25b" />
-
-<img width="1438" height="249" alt="Screenshot 2025-07-09 at 3 53 21 PM" src="https://github.com/user-attachments/assets/70d9cc74-8d90-4dd6-8e2c-db09ba9f4329" />
-
-<img width="1438" height="592" alt="Screenshot 2025-07-09 at 3 53 05 PM" src="https://github.com/user-attachments/assets/287bbcdf-8a77-4c0f-afc2-32fdc1c06b5d" />
-
-<img width="1438" height="474" alt="Screenshot 2025-07-09 at 3 52 44 PM" src="https://github.com/user-attachments/assets/b9deeb91-8910-4ae9-825a-4993adabbc40" />
-
-<img width="1439" height="625" alt="Screenshot 2025-07-09 at 3 54 49 PM" src="https://github.com/user-attachments/assets/03b6c31e-a4b0-4141-ac65-3722a7f2ba0d" />
-
-<img width="1439" height="625" alt="Screenshot 2025-07-09 at 3 54 38 PM" src="https://github.com/user-attachments/assets/cfbece37-1ca6-42c4-8dfd-ccaf99d30809" />
-
-
-
+<img width="1438" height="688" alt="Screenshot 2025-07-09 at 3 52 14 PM" src="https://github.com/user-attachments/assets/ea46ca97-9381-4163-82ae-5092434c1a6f" /><img width="1438" height="474" alt="Screenshot 2025-07-09 at 3 52 44 PM" src="https://github.com/user-attachments/assets/350b5aa4-828a-4d1d-88d2-9deb85148ca0" /><img width="1438" height="592" alt="Screenshot 2025-07-09 at 3 53 05 PM" src="https://github.com/user-attachments/assets/5e0671df-a1ab-47e9-90f8-1998d208cc3a" /><img width="1438" height="249" alt="Screenshot 2025-07-09 at 3 53 21 PM" src="https://github.com/user-attachments/assets/e9934703-1553-4350-bfa5-50544ff8178e" /><img width="1438" height="119" alt="Screenshot 2025-07-09 at 3 53 56 PM" src="https://github.com/user-attachments/assets/1e0798a7-b292-4502-9da1-b4376e6befc4" /><img width="1439" height="625" alt="Screenshot 2025-07-09 at 3 54 27 PM" src="https://github.com/user-attachments/assets/abf96c59-a841-456e-8151-57b53ae185f6" /><img width="1439" height="625" alt="Screenshot 2025-07-09 at 3 54 38 PM" src="https://github.com/user-attachments/assets/340f63b8-29c1-4d59-9c37-4152d6050612" /><img width="1439" height="625" alt="Screenshot 2025-07-09 at 3 54 49 PM" src="https://github.com/user-attachments/assets/1925191e-6ead-4692-a351-8ae8c1e6ff86" />
 
 ### 📊 **Dataset Exploration**
 
