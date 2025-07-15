@@ -494,7 +494,7 @@ Total Charges: $2,606.40
 
 ### Examples
 
-❗ **High Risk: New Month-to-Month Customer with High Charges
+❗ **High Risk: New Month-to-Month Customer with High Charges**
 
 <div align="center">
 
@@ -502,7 +502,7 @@ Total Charges: $2,606.40
 
 </div>
 
-⚠️ **Medium Risk: Long-Term Customer with Full Services
+⚠️ **Medium Risk: Long-Term Customer with Full Services**
 
 <div align="center">
 
@@ -510,7 +510,7 @@ Total Charges: $2,606.40
 
 </div>
 
-✅ **Low Risk: Stable Family Customer
+✅ **Low Risk: Stable Family Customer**
 
 <div align="center">
 
