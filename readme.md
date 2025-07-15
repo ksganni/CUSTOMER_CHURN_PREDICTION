@@ -76,6 +76,25 @@ Customer churn refers to customers stopping use of a company's services or produ
 
 ### 🏠 **Homepage & Project Overview**
 
+<img width="1438" height="688" alt="Screenshot 2025-07-09 at 3 52 14 PM" src="https://github.com/user-attachments/assets/869c4539-46d2-4c26-876a-d5452ac8880e" />
+
+<img width="1439" height="625" alt="Screenshot 2025-07-09 at 3 54 27 PM" src="https://github.com/user-attachments/assets/86541324-eb29-4472-a5b2-c9fcab1f5908" />
+
+<img width="1438" height="119" alt="Screenshot 2025-07-09 at 3 53 56 PM" src="https://github.com/user-attachments/assets/da0e398e-554e-4608-b17c-5e92da5fe25b" />
+
+<img width="1438" height="249" alt="Screenshot 2025-07-09 at 3 53 21 PM" src="https://github.com/user-attachments/assets/70d9cc74-8d90-4dd6-8e2c-db09ba9f4329" />
+
+<img width="1438" height="592" alt="Screenshot 2025-07-09 at 3 53 05 PM" src="https://github.com/user-attachments/assets/287bbcdf-8a77-4c0f-afc2-32fdc1c06b5d" />
+
+<img width="1438" height="474" alt="Screenshot 2025-07-09 at 3 52 44 PM" src="https://github.com/user-attachments/assets/b9deeb91-8910-4ae9-825a-4993adabbc40" />
+
+<img width="1439" height="625" alt="Screenshot 2025-07-09 at 3 54 49 PM" src="https://github.com/user-attachments/assets/03b6c31e-a4b0-4141-ac65-3722a7f2ba0d" />
+
+<img width="1439" height="625" alt="Screenshot 2025-07-09 at 3 54 38 PM" src="https://github.com/user-attachments/assets/cfbece37-1ca6-42c4-8dfd-ccaf99d30809" />
+
+
+
+
 ### 📊 **Dataset Exploration**
 
 ### 🤖 **Model Performance Comparison**
