@@ -80,13 +80,21 @@ Customer churn refers to customers stopping use of a company's services or produ
 
 ### 📊 **Dataset Exploration**
 
+<img width="1439" height="687" alt="Screenshot 2025-07-09 at 3 55 13 PM" src="https://github.com/user-attachments/assets/4d983560-8967-49aa-8e66-26cf352cea1d" /><img width="1439" height="545" alt="Screenshot 2025-07-09 at 3 55 42 PM" src="https://github.com/user-attachments/assets/b2e2a399-f664-45cb-a52c-f4e5084be2c2" /><img width="1439" height="589" alt="Screenshot 2025-07-09 at 3 56 06 PM" src="https://github.com/user-attachments/assets/7867fa8f-00b5-4daf-816e-7764f2fa7a96" />
+
 ### 🤖 **Model Performance Comparison**
 
+<img width="1439" height="529" alt="Screenshot 2025-07-09 at 3 57 57 PM" src="https://github.com/user-attachments/assets/dd9b0fd3-18a3-456c-8aa9-7feded36e9ce" /><img width="1439" height="537" alt="Screenshot 2025-07-09 at 3 58 12 PM" src="https://github.com/user-attachments/assets/54985b5e-53a9-4b8c-b196-70ffd30188f6" /><img width="1439" height="521" alt="Screenshot 2025-07-09 at 3 58 25 PM" src="https://github.com/user-attachments/assets/1006d192-2966-4bc2-b35c-4baa2523c064" /><img width="1439" height="635" alt="Screenshot 2025-07-09 at 3 58 51 PM" src="https://github.com/user-attachments/assets/4961af31-f572-4b3b-bb8c-cfea2662f0c0" />
+
 ### 🔮 **Prediction Interface**
+
+<img width="1438" height="328" alt="Screenshot 2025-07-09 at 3 22 52 PM" src="https://github.com/user-attachments/assets/59a19b93-55b0-4a0f-9bb1-c8f89ef24708" /><img width="1438" height="605" alt="Screenshot 2025-07-09 at 3 23 21 PM" src="https://github.com/user-attachments/assets/cef7e61c-f050-48bf-bd17-721912cc87e5" /><img width="1438" height="600" alt="Screenshot 2025-07-09 at 3 23 38 PM" src="https://github.com/user-attachments/assets/1cc065f9-10a1-4c0d-a5e8-5e2767b11f94" /><img width="1438" height="600" alt="Screenshot 2025-07-09 at 3 23 50 PM" src="https://github.com/user-attachments/assets/a6595248-7d65-402a-8b7d-a1dd772bd125" />
 
 ### Examples
 
 ❗ **High Risk: New Month-to-Month Customer with High Charges
+
+<img width="1439" height="555" alt="Screenshot 2025-07-09 at 7 52 51 PM" src="https://github.com/user-attachments/assets/9e7c0e09-1a27-451b-87e5-4454e1179539" /><img width="1439" height="593" alt="Screenshot 2025-07-09 at 7 53 21 PM" src="https://github.com/user-attachments/assets/bf195716-dcbc-4464-8033-f646fcc9c8d8" /><img width="1439" height="576" alt="Screenshot 2025-07-09 at 7 53 36 PM" src="https://github.com/user-attachments/assets/631ba123-1c63-4d71-ba04-9b22e5d24837" /><img width="1439" height="459" alt="Screenshot 2025-07-09 at 7 54 08 PM" src="https://github.com/user-attachments/assets/0b35eb26-98ba-42ef-a2e9-b24af0ce8c11" /><img width="1439" height="597" alt="Screenshot 2025-07-09 at 7 54 40 PM" src="https://github.com/user-attachments/assets/7982bec6-8469-48b1-a5f4-2d71d974ec64" /><img width="1439" height="495" alt="Screenshot 2025-07-09 at 7 55 05 PM" src="https://github.com/user-attachments/assets/5547629a-75eb-4daa-9215-d1a6b0d2f67e" /><img width="1439" height="447" alt="Screenshot 2025-07-09 at 7 55 51 PM" src="https://github.com/user-attachments/assets/11260de8-63e6-48ad-912a-91d53cbf861f" /><img width="1439" height="209" alt="Screenshot 2025-07-09 at 7 56 09 PM" src="https://github.com/user-attachments/assets/398f4580-d120-4ed7-b6c2-f81c607033e4" /><img width="1439" height="244" alt="Screenshot 2025-07-09 at 7 56 31 PM" src="https://github.com/user-attachments/assets/af404ce6-e82a-41a5-8131-b1b900faa722" />
 
 ⚠️ **Medium Risk: Long-Term Customer with Full Services
 
