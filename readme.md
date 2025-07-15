@@ -267,6 +267,15 @@ Customer-Churn-Prediction/
   - ROC-AUC = 1.0: Perfect predictions (rarely achievable)
   - ROC-AUC > 0.8: Generally considered good performance
 
+**🎛️ Hyperparameter Tuning**
+
+- **GridSearchCV:** Systematically tests different parameter combinations
+- **Parameters tuned for Random Forest:**
+    - **n_estimators:** Number of trees (50, 100, 200)
+    - **max_depth:** Maximum tree depth (10, 20, None)
+    - **min_samples_split:** Minimum samples to split a node (2, 5, 10)
+    - **min_samples_leaf:** Minimum samples in leaf nodes (1, 2, 4)
+
 **🏆 Model Selection Results:**
 
 **Selected Model:** CatBoost
@@ -275,14 +284,6 @@ Customer-Churn-Prediction/
 - **Cross-Validation:** All models were evaluated using 5-fold cross-validation
 - **Training Features:** 31 features
 
-**Models Performance Summary:**
-- **CatBoost:** 0.932 ± 0.053
-- **Random Forest:** 0.931 ± 0.043
-- **XGBoost:** 0.930 ± 0.058
-- **Logistic Regression:** 0.917 ± 0.062
-- **Decision Tree:** 0.790 ± 0.064
-
-**Note:** ROC-AUC (Receiver Operating Characteristic - Area Under Curve) measures the model's ability to distinguish between classes. A score of 1.0 is perfect, while 0.5 is random guessing.
 
 ### 5️⃣ **Model Explanation with SHAP** (`App/shap_helper.py`)
 
@@ -292,6 +293,12 @@ Customer-Churn-Prediction/
 - **Feature impact:** Shows how each customer characteristic influenced the prediction
 - **Direction of influence:** Whether each feature pushed toward "Churn" or "Stay"
 - **Magnitude of impact:** How strongly each feature influenced the decision
+
+**SHAP visualizations:**
+
+**📊 Bar Chart:** Shows top features that influenced the prediction
+**📋 Detailed Table:** Lists all features with their SHAP values
+**📝 Summary:** Explains the prediction in plain English
 
 **Example SHAP explanation:**
 ```
@@ -306,6 +313,11 @@ Top factors decreasing churn risk:
 - Has partner: -0.08 (stable family situation)
 - Low monthly charges: -0.05 (price-conscious customer)
 ```
+
+**Fallback Mechanism**
+If SHAP fails (due to unusual input combinations), the system provides:
+- **Feature importance:** Shows which features generally matter most for predictions
+- **General explanation:** Describes typical patterns without customer-specific details
 
 ---
 
@@ -478,11 +490,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <div align="center">
 
-**⭐ Star this repository if you found it helpful!**
 
-[![GitHub stars](https://img.shields.io/github/stars/ksganni/Customer-Churn-Prediction?style=social)](https://github.com/ksganni/Customer-Churn-Prediction/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/ksganni/Customer-Churn-Prediction?style=social)](https://github.com/ksganni/Customer-Churn-Prediction/network/members)
 
-**Made with ❤️ and ☕**
+**Developed with 🛠️ and 📊**
 
 </div>
