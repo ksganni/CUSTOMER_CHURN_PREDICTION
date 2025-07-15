@@ -19,13 +19,13 @@
 ## 📋 Table of Contents
 
 - [✨ Key Features](#-key-features)
-- [📸 App Screenshots](#-app-screenshots)
 - [🎯 Problem Statement](#-problem-statement)
 - [📊 Data Overview](#-data-overview)
 - [🗂️ Project Structure](#️-project-structure)
 - [⚙️ Technical Implementation](#️-technical-implementation)
 - [🛠️ Installation & Setup](#️-installation--setup)
 - [📱 Usage Examples](#-usage-examples)
+- [📸 App Screenshots](#-app-screenshots)
 - [🤝 Contributing](#-contributing)
 - [📄 License](#-license)
 
@@ -69,66 +69,6 @@
 Customer churn refers to customers stopping use of a company's services or products. In telecom, this means customers canceling phone, internet, or cable services and switching to competitors.
 
 ---
-
-## 📸 App Screenshots
-
-### 🏠 **Homepage & Project Overview**
-
-<div align="center">
-<img width="1438" height="688" alt="Screenshot 2025-07-09 at 3 52 14 PM" src="https://github.com/user-attachments/assets/ea46ca97-9381-4163-82ae-5092434c1a6f" /><img width="1438" height="474" alt="Screenshot 2025-07-09 at 3 52 44 PM" src="https://github.com/user-attachments/assets/350b5aa4-828a-4d1d-88d2-9deb85148ca0" /><img width="1438" height="592" alt="Screenshot 2025-07-09 at 3 53 05 PM" src="https://github.com/user-attachments/assets/5e0671df-a1ab-47e9-90f8-1998d208cc3a" /><img width="1438" height="249" alt="Screenshot 2025-07-09 at 3 53 21 PM" src="https://github.com/user-attachments/assets/e9934703-1553-4350-bfa5-50544ff8178e" /><img width="1438" height="119" alt="Screenshot 2025-07-09 at 3 53 56 PM" src="https://github.com/user-attachments/assets/1e0798a7-b292-4502-9da1-b4376e6befc4" /><img width="1439" height="625" alt="Screenshot 2025-07-09 at 3 54 27 PM" src="https://github.com/user-attachments/assets/abf96c59-a841-456e-8151-57b53ae185f6" /><img width="1439" height="625" alt="Screenshot 2025-07-09 at 3 54 38 PM" src="https://github.com/user-attachments/assets/340f63b8-29c1-4d59-9c37-4152d6050612" /><img width="1439" height="625" alt="Screenshot 2025-07-09 at 3 54 49 PM" src="https://github.com/user-attachments/assets/1925191e-6ead-4692-a351-8ae8c1e6ff86" />
-
-</div>
-
-### 📊 **Dataset Exploration**
-
-<div align="center">
-
-<img width="1439" height="687" alt="Screenshot 2025-07-09 at 3 55 13 PM" src="https://github.com/user-attachments/assets/4d983560-8967-49aa-8e66-26cf352cea1d" /><img width="1439" height="545" alt="Screenshot 2025-07-09 at 3 55 42 PM" src="https://github.com/user-attachments/assets/b2e2a399-f664-45cb-a52c-f4e5084be2c2" /><img width="1439" height="589" alt="Screenshot 2025-07-09 at 3 56 06 PM" src="https://github.com/user-attachments/assets/7867fa8f-00b5-4daf-816e-7764f2fa7a96" />
-
-</div>
-
-### 🤖 **Model Performance Comparison**
-
-<div align="center">
-
-<img width="1439" height="529" alt="Screenshot 2025-07-09 at 3 57 57 PM" src="https://github.com/user-attachments/assets/dd9b0fd3-18a3-456c-8aa9-7feded36e9ce" /><img width="1439" height="537" alt="Screenshot 2025-07-09 at 3 58 12 PM" src="https://github.com/user-attachments/assets/54985b5e-53a9-4b8c-b196-70ffd30188f6" /><img width="1439" height="521" alt="Screenshot 2025-07-09 at 3 58 25 PM" src="https://github.com/user-attachments/assets/1006d192-2966-4bc2-b35c-4baa2523c064" /><img width="1439" height="635" alt="Screenshot 2025-07-09 at 3 58 51 PM" src="https://github.com/user-attachments/assets/4961af31-f572-4b3b-bb8c-cfea2662f0c0" />
-
-</div>
-
-### 🔮 **Prediction Interface**
-
-<div align="center">
-
-<img width="1438" height="328" alt="Screenshot 2025-07-09 at 3 22 52 PM" src="https://github.com/user-attachments/assets/59a19b93-55b0-4a0f-9bb1-c8f89ef24708" /><img width="1438" height="605" alt="Screenshot 2025-07-09 at 3 23 21 PM" src="https://github.com/user-attachments/assets/cef7e61c-f050-48bf-bd17-721912cc87e5" /><img width="1438" height="600" alt="Screenshot 2025-07-09 at 3 23 38 PM" src="https://github.com/user-attachments/assets/1cc065f9-10a1-4c0d-a5e8-5e2767b11f94" /><img width="1438" height="600" alt="Screenshot 2025-07-09 at 3 23 50 PM" src="https://github.com/user-attachments/assets/a6595248-7d65-402a-8b7d-a1dd772bd125" />
-
-</div>
-
-### Examples
-
-❗ **High Risk: New Month-to-Month Customer with High Charges
-
-<div align="center">
-
-<img width="1439" height="555" alt="Screenshot 2025-07-09 at 7 52 51 PM" src="https://github.com/user-attachments/assets/9e7c0e09-1a27-451b-87e5-4454e1179539" /><img width="1439" height="593" alt="Screenshot 2025-07-09 at 7 53 21 PM" src="https://github.com/user-attachments/assets/bf195716-dcbc-4464-8033-f646fcc9c8d8" /><img width="1439" height="576" alt="Screenshot 2025-07-09 at 7 53 36 PM" src="https://github.com/user-attachments/assets/631ba123-1c63-4d71-ba04-9b22e5d24837" /><img width="1439" height="459" alt="Screenshot 2025-07-09 at 7 54 08 PM" src="https://github.com/user-attachments/assets/0b35eb26-98ba-42ef-a2e9-b24af0ce8c11" /><img width="1439" height="597" alt="Screenshot 2025-07-09 at 7 54 40 PM" src="https://github.com/user-attachments/assets/7982bec6-8469-48b1-a5f4-2d71d974ec64" /><img width="1439" height="495" alt="Screenshot 2025-07-09 at 7 55 05 PM" src="https://github.com/user-attachments/assets/5547629a-75eb-4daa-9215-d1a6b0d2f67e" /><img width="1439" height="447" alt="Screenshot 2025-07-09 at 7 55 51 PM" src="https://github.com/user-attachments/assets/11260de8-63e6-48ad-912a-91d53cbf861f" /><img width="1439" height="209" alt="Screenshot 2025-07-09 at 7 56 09 PM" src="https://github.com/user-attachments/assets/398f4580-d120-4ed7-b6c2-f81c607033e4" /><img width="1439" height="244" alt="Screenshot 2025-07-09 at 7 56 31 PM" src="https://github.com/user-attachments/assets/af404ce6-e82a-41a5-8131-b1b900faa722" />
-
-</div>
-
-⚠️ **Medium Risk: Long-Term Customer with Full Services
-
-<div align="center">
-
-<img width="1439" height="563" alt="Screenshot 2025-07-09 at 7 59 48 PM" src="https://github.com/user-attachments/assets/ea1a5334-755f-4128-8284-d918b68b7aff" /><img width="1439" height="587" alt="Screenshot 2025-07-09 at 8 00 19 PM" src="https://github.com/user-attachments/assets/93a7242e-ac4b-451e-a523-03838057935e" /><img width="1439" height="562" alt="Screenshot 2025-07-09 at 8 00 36 PM" src="https://github.com/user-attachments/assets/0c7806d8-7868-4da2-bcae-bca19eb9fab5" /><img width="1439" height="438" alt="Screenshot 2025-07-09 at 8 00 48 PM" src="https://github.com/user-attachments/assets/1357253e-32dd-4310-9a47-5dc3fc880def" /><img width="1439" height="598" alt="Screenshot 2025-07-09 at 8 01 03 PM" src="https://github.com/user-attachments/assets/09a5618d-ce7a-4671-abd0-359dd6835c35" /><img width="1439" height="460" alt="Screenshot 2025-07-09 at 8 01 40 PM" src="https://github.com/user-attachments/assets/f0a2d6ae-c455-48f4-a41b-7bd33a8c736e" /><img width="1439" height="452" alt="Screenshot 2025-07-09 at 8 02 22 PM" src="https://github.com/user-attachments/assets/b58aa001-3483-4162-8466-27bcac763eb9" /><img width="1439" height="199" alt="Screenshot 2025-07-09 at 8 02 45 PM" src="https://github.com/user-attachments/assets/82848a3f-a204-457b-b553-4687ba1e388e" /><img width="1439" height="208" alt="Screenshot 2025-07-09 at 8 02 58 PM" src="https://github.com/user-attachments/assets/85fb9751-00de-4746-9b4b-719367c00c37" />
-
-</div>
-
-✅ **Low Risk: Stable Family Customer
-
-<div align="center">
-
-<img width="1439" height="555" alt="Screenshot 2025-07-09 at 8 05 43 PM" src="https://github.com/user-attachments/assets/aafe2df0-0361-4ea1-b3db-b9118fbdc405" /><img width="1439" height="586" alt="Screenshot 2025-07-09 at 8 05 59 PM" src="https://github.com/user-attachments/assets/079ba1d1-f9d2-48d0-a9da-4ac3a81fda2e" /><img width="1439" height="570" alt="Screenshot 2025-07-09 at 8 06 26 PM" src="https://github.com/user-attachments/assets/b095c308-a299-4206-8309-4da194a76141" /><img width="1439" height="446" alt="Screenshot 2025-07-09 at 8 06 39 PM" src="https://github.com/user-attachments/assets/c9318afd-2030-4f61-8c26-2e3125b7d354" /><img width="1439" height="591" alt="Screenshot 2025-07-09 at 8 07 04 PM" src="https://github.com/user-attachments/assets/dc93d62c-15c1-41c5-85a6-da3a85e27f0d" /><img width="1439" height="477" alt="Screenshot 2025-07-09 at 8 07 17 PM" src="https://github.com/user-attachments/assets/c0d91683-7b1a-4ec4-9bc1-eeecc9468c29" /><img width="1439" height="448" alt="Screenshot 2025-07-09 at 8 07 30 PM" src="https://github.com/user-attachments/assets/9a155963-6045-4b0d-9f9e-3de050c994c6" /><img width="1439" height="195" alt="Screenshot 2025-07-09 at 8 07 52 PM" src="https://github.com/user-attachments/assets/8f47caea-cbd7-43e9-a8ab-b50c6797a223" /><img width="1439" height="251" alt="Screenshot 2025-07-09 at 8 08 01 PM" src="https://github.com/user-attachments/assets/3cf2b18e-e3cd-4d37-95de-cd63c57e99bb" />
-
-</div>
-
 
 ## 🎯 Problem Statement
 
@@ -516,6 +456,67 @@ Payment Method: Credit Card(Automatic)
 Monthly Charges: $72.40
 Total Charges: $2,606.40
 ```
+
+---
+
+## 📸 App Screenshots
+
+### 🏠 **Homepage & Project Overview**
+
+<div align="center">
+<img width="1438" height="688" alt="Screenshot 2025-07-09 at 3 52 14 PM" src="https://github.com/user-attachments/assets/ea46ca97-9381-4163-82ae-5092434c1a6f" /><img width="1438" height="474" alt="Screenshot 2025-07-09 at 3 52 44 PM" src="https://github.com/user-attachments/assets/350b5aa4-828a-4d1d-88d2-9deb85148ca0" /><img width="1438" height="592" alt="Screenshot 2025-07-09 at 3 53 05 PM" src="https://github.com/user-attachments/assets/5e0671df-a1ab-47e9-90f8-1998d208cc3a" /><img width="1438" height="249" alt="Screenshot 2025-07-09 at 3 53 21 PM" src="https://github.com/user-attachments/assets/e9934703-1553-4350-bfa5-50544ff8178e" /><img width="1438" height="119" alt="Screenshot 2025-07-09 at 3 53 56 PM" src="https://github.com/user-attachments/assets/1e0798a7-b292-4502-9da1-b4376e6befc4" /><img width="1439" height="625" alt="Screenshot 2025-07-09 at 3 54 27 PM" src="https://github.com/user-attachments/assets/abf96c59-a841-456e-8151-57b53ae185f6" /><img width="1439" height="625" alt="Screenshot 2025-07-09 at 3 54 38 PM" src="https://github.com/user-attachments/assets/340f63b8-29c1-4d59-9c37-4152d6050612" /><img width="1439" height="625" alt="Screenshot 2025-07-09 at 3 54 49 PM" src="https://github.com/user-attachments/assets/1925191e-6ead-4692-a351-8ae8c1e6ff86" />
+
+</div>
+
+### 📊 **Dataset Exploration**
+
+<div align="center">
+
+<img width="1439" height="687" alt="Screenshot 2025-07-09 at 3 55 13 PM" src="https://github.com/user-attachments/assets/4d983560-8967-49aa-8e66-26cf352cea1d" /><img width="1439" height="545" alt="Screenshot 2025-07-09 at 3 55 42 PM" src="https://github.com/user-attachments/assets/b2e2a399-f664-45cb-a52c-f4e5084be2c2" /><img width="1439" height="589" alt="Screenshot 2025-07-09 at 3 56 06 PM" src="https://github.com/user-attachments/assets/7867fa8f-00b5-4daf-816e-7764f2fa7a96" />
+
+</div>
+
+### 🤖 **Model Performance Comparison**
+
+<div align="center">
+
+<img width="1439" height="529" alt="Screenshot 2025-07-09 at 3 57 57 PM" src="https://github.com/user-attachments/assets/dd9b0fd3-18a3-456c-8aa9-7feded36e9ce" /><img width="1439" height="537" alt="Screenshot 2025-07-09 at 3 58 12 PM" src="https://github.com/user-attachments/assets/54985b5e-53a9-4b8c-b196-70ffd30188f6" /><img width="1439" height="521" alt="Screenshot 2025-07-09 at 3 58 25 PM" src="https://github.com/user-attachments/assets/1006d192-2966-4bc2-b35c-4baa2523c064" /><img width="1439" height="635" alt="Screenshot 2025-07-09 at 3 58 51 PM" src="https://github.com/user-attachments/assets/4961af31-f572-4b3b-bb8c-cfea2662f0c0" />
+
+</div>
+
+### 🔮 **Prediction Interface**
+
+<div align="center">
+
+<img width="1438" height="328" alt="Screenshot 2025-07-09 at 3 22 52 PM" src="https://github.com/user-attachments/assets/59a19b93-55b0-4a0f-9bb1-c8f89ef24708" /><img width="1438" height="605" alt="Screenshot 2025-07-09 at 3 23 21 PM" src="https://github.com/user-attachments/assets/cef7e61c-f050-48bf-bd17-721912cc87e5" /><img width="1438" height="600" alt="Screenshot 2025-07-09 at 3 23 38 PM" src="https://github.com/user-attachments/assets/1cc065f9-10a1-4c0d-a5e8-5e2767b11f94" /><img width="1438" height="600" alt="Screenshot 2025-07-09 at 3 23 50 PM" src="https://github.com/user-attachments/assets/a6595248-7d65-402a-8b7d-a1dd772bd125" />
+
+</div>
+
+### Examples
+
+❗ **High Risk: New Month-to-Month Customer with High Charges
+
+<div align="center">
+
+<img width="1439" height="555" alt="Screenshot 2025-07-09 at 7 52 51 PM" src="https://github.com/user-attachments/assets/9e7c0e09-1a27-451b-87e5-4454e1179539" /><img width="1439" height="593" alt="Screenshot 2025-07-09 at 7 53 21 PM" src="https://github.com/user-attachments/assets/bf195716-dcbc-4464-8033-f646fcc9c8d8" /><img width="1439" height="576" alt="Screenshot 2025-07-09 at 7 53 36 PM" src="https://github.com/user-attachments/assets/631ba123-1c63-4d71-ba04-9b22e5d24837" /><img width="1439" height="459" alt="Screenshot 2025-07-09 at 7 54 08 PM" src="https://github.com/user-attachments/assets/0b35eb26-98ba-42ef-a2e9-b24af0ce8c11" /><img width="1439" height="597" alt="Screenshot 2025-07-09 at 7 54 40 PM" src="https://github.com/user-attachments/assets/7982bec6-8469-48b1-a5f4-2d71d974ec64" /><img width="1439" height="495" alt="Screenshot 2025-07-09 at 7 55 05 PM" src="https://github.com/user-attachments/assets/5547629a-75eb-4daa-9215-d1a6b0d2f67e" /><img width="1439" height="447" alt="Screenshot 2025-07-09 at 7 55 51 PM" src="https://github.com/user-attachments/assets/11260de8-63e6-48ad-912a-91d53cbf861f" /><img width="1439" height="209" alt="Screenshot 2025-07-09 at 7 56 09 PM" src="https://github.com/user-attachments/assets/398f4580-d120-4ed7-b6c2-f81c607033e4" /><img width="1439" height="244" alt="Screenshot 2025-07-09 at 7 56 31 PM" src="https://github.com/user-attachments/assets/af404ce6-e82a-41a5-8131-b1b900faa722" />
+
+</div>
+
+⚠️ **Medium Risk: Long-Term Customer with Full Services
+
+<div align="center">
+
+<img width="1439" height="563" alt="Screenshot 2025-07-09 at 7 59 48 PM" src="https://github.com/user-attachments/assets/ea1a5334-755f-4128-8284-d918b68b7aff" /><img width="1439" height="587" alt="Screenshot 2025-07-09 at 8 00 19 PM" src="https://github.com/user-attachments/assets/93a7242e-ac4b-451e-a523-03838057935e" /><img width="1439" height="562" alt="Screenshot 2025-07-09 at 8 00 36 PM" src="https://github.com/user-attachments/assets/0c7806d8-7868-4da2-bcae-bca19eb9fab5" /><img width="1439" height="438" alt="Screenshot 2025-07-09 at 8 00 48 PM" src="https://github.com/user-attachments/assets/1357253e-32dd-4310-9a47-5dc3fc880def" /><img width="1439" height="598" alt="Screenshot 2025-07-09 at 8 01 03 PM" src="https://github.com/user-attachments/assets/09a5618d-ce7a-4671-abd0-359dd6835c35" /><img width="1439" height="460" alt="Screenshot 2025-07-09 at 8 01 40 PM" src="https://github.com/user-attachments/assets/f0a2d6ae-c455-48f4-a41b-7bd33a8c736e" /><img width="1439" height="452" alt="Screenshot 2025-07-09 at 8 02 22 PM" src="https://github.com/user-attachments/assets/b58aa001-3483-4162-8466-27bcac763eb9" /><img width="1439" height="199" alt="Screenshot 2025-07-09 at 8 02 45 PM" src="https://github.com/user-attachments/assets/82848a3f-a204-457b-b553-4687ba1e388e" /><img width="1439" height="208" alt="Screenshot 2025-07-09 at 8 02 58 PM" src="https://github.com/user-attachments/assets/85fb9751-00de-4746-9b4b-719367c00c37" />
+
+</div>
+
+✅ **Low Risk: Stable Family Customer
+
+<div align="center">
+
+<img width="1439" height="555" alt="Screenshot 2025-07-09 at 8 05 43 PM" src="https://github.com/user-attachments/assets/aafe2df0-0361-4ea1-b3db-b9118fbdc405" /><img width="1439" height="586" alt="Screenshot 2025-07-09 at 8 05 59 PM" src="https://github.com/user-attachments/assets/079ba1d1-f9d2-48d0-a9da-4ac3a81fda2e" /><img width="1439" height="570" alt="Screenshot 2025-07-09 at 8 06 26 PM" src="https://github.com/user-attachments/assets/b095c308-a299-4206-8309-4da194a76141" /><img width="1439" height="446" alt="Screenshot 2025-07-09 at 8 06 39 PM" src="https://github.com/user-attachments/assets/c9318afd-2030-4f61-8c26-2e3125b7d354" /><img width="1439" height="591" alt="Screenshot 2025-07-09 at 8 07 04 PM" src="https://github.com/user-attachments/assets/dc93d62c-15c1-41c5-85a6-da3a85e27f0d" /><img width="1439" height="477" alt="Screenshot 2025-07-09 at 8 07 17 PM" src="https://github.com/user-attachments/assets/c0d91683-7b1a-4ec4-9bc1-eeecc9468c29" /><img width="1439" height="448" alt="Screenshot 2025-07-09 at 8 07 30 PM" src="https://github.com/user-attachments/assets/9a155963-6045-4b0d-9f9e-3de050c994c6" /><img width="1439" height="195" alt="Screenshot 2025-07-09 at 8 07 52 PM" src="https://github.com/user-attachments/assets/8f47caea-cbd7-43e9-a8ab-b50c6797a223" /><img width="1439" height="251" alt="Screenshot 2025-07-09 at 8 08 01 PM" src="https://github.com/user-attachments/assets/3cf2b18e-e3cd-4d37-95de-cd63c57e99bb" />
+
+</div>
 
 ---
 
