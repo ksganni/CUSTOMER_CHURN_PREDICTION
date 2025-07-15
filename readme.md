@@ -19,7 +19,7 @@
 ## 📋 Table of Contents
 
 - [✨ Key Features](#-key-features)
-- [📸 App Screenshots]
+- [📸 App Screenshots](#-app-screenshots)
 - [🎯 Problem Statement](#-problem-statement)
 - [📊 Data Overview](#-data-overview)
 - [🗂️ Project Structure](#️-project-structure)
@@ -89,6 +89,8 @@ Customer churn refers to customers stopping use of a company's services or produ
 ⚠️ **Medium Risk: Long-Term Customer with Full Services
 
 ✅ **Low Risk: Stable Family Customer
+
+</div>
 
 
 ## 🎯 Problem Statement
