@@ -1,6 +1,6 @@
-# 📉 CUSTOMER CHURN PREDICTION
-
 <div align="center">
+
+# 📉 CUSTOMER CHURN PREDICTION
 
 [![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)](https://streamlit.io/)
