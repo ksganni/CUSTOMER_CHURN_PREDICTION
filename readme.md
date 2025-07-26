@@ -266,11 +266,8 @@ Customer-Churn-Prediction/
 
 - **Cross-Validation:** 5-fold cross-validation was used to ensure robust and unbiased performance estimates.
 - **Metrics Used:**
-  - **ROC-AUC (Receiver Operating Characteristic – Area Under Curve):**
-    - 0.5 → Random guessing (no skill)
-    - 1.0 → Perfect prediction (ideal, rare)
-    - 0.8 → Generally good performance
-  - **Accuracy:** Percentage of correctly predicted samples
+  - ROC-AUC (Receiver Operating Characteristic – Area Under Curve)
+  - Accuracy Score
 
 **🎛️ Hyperparameter Tuning**
 
@@ -283,9 +280,7 @@ Customer-Churn-Prediction/
   - `min_samples_leaf`: [1, 2, 4]
 
 **Model Selection Results**
-
 The following models were trained and evaluated using 5-fold cross-validation:
-
 - Logistic Regression
 - Decision Tree
 - Random Forest
@@ -308,16 +303,14 @@ The following models were trained and evaluated using 5-fold cross-validation:
 **🧠 Metric Explanations**
 
 **🎯 ROC-AUC (Receiver Operating Characteristic – Area Under Curve)**
-
 - Measures the model’s ability to distinguish between churners and non-churners.
 - Particularly useful for imbalanced datasets like churn.
 - Scores interpretation:
   - 0.5 → No discrimination (random guess)
   - 1.0 → Perfect discrimination
-  - > 0.8 → Excellent performance
+  - 0.8 → Excellent performance
 
 **✔️ Accuracy**
-
 - Measures the proportion of correct predictions.
 - Can be misleading on imbalanced datasets.
 - Best used alongside ROC-AUC to evaluate overall model effectiveness.
