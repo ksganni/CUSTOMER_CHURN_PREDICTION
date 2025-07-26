@@ -261,29 +261,72 @@ Customer-Churn-Prediction/
 | **XGBoost** | - Advanced boosting algorithm<br>- Excellent performance on structured data<br>- Handles missing values automatically |
 | **CatBoost** | - Specialized for categorical features<br>- Reduces need for extensive preprocessing<br>- Built-in overfitting protection |
 
-**📊 Model Evaluation Process:**
-- **Cross-validation:** 5-fold cross-validation ensures robust performance estimates
-- **Metric used:** ROC-AUC (Receiver Operating Characteristic - Area Under Curve)
-  - ROC-AUC = 0.5: Random guessing (useless model)
-  - ROC-AUC = 1.0: Perfect predictions (rarely achievable)
-  - ROC-AUC > 0.8: Generally considered good performance
 
-**🎛️ Hyperparameter Tuning**
+## 📊 Model Evaluation Process
 
-- **GridSearchCV:** Systematically tests different parameter combinations
-- **Parameters tuned for Random Forest:**
-    - **n_estimators:** Number of trees (50, 100, 200)
-    - **max_depth:** Maximum tree depth (10, 20, None)
-    - **min_samples_split:** Minimum samples to split a node (2, 5, 10)
-    - **min_samples_leaf:** Minimum samples in leaf nodes (1, 2, 4)
+- **Cross-Validation:** 5-fold cross-validation was used to ensure robust and unbiased performance estimates.
+- **Metrics Used:**
+  - **ROC-AUC (Receiver Operating Characteristic – Area Under Curve):**
+    - 0.5 → Random guessing (no skill)
+    - 1.0 → Perfect prediction (ideal, rare)
+    - > 0.8 → Generally good performance
+  - **Accuracy:** Percentage of correctly predicted samples
 
-**🏆 Model Selection Results:**
+---
 
-**Selected Model:** CatBoost
-- **ROC-AUC Score:** 0.932 (outstanding performance)
-- **Why this model?** CatBoost achieved the highest ROC-AUC score, indicating excellent performance in distinguishing between churning and non-churning customers
-- **Cross-Validation:** All models were evaluated using 5-fold cross-validation
-- **Training Features:** 31 features
+## 🎛️ Hyperparameter Tuning
+
+- **Technique:** `GridSearchCV` systematically tested combinations of hyperparameters to optimize model performance.
+- **Best Model Tuned:** **Random Forest**
+- **Hyperparameters Tuned:**
+  - `n_estimators`: [50, 100, 200]
+  - `max_depth`: [10, 20, None]
+  - `min_samples_split`: [2, 5, 10]
+  - `min_samples_leaf`: [1, 2, 4]
+
+---
+
+## Model Selection Results
+
+The following models were trained and evaluated using 5-fold cross-validation:
+
+- Logistic Regression
+- Decision Tree
+- Random Forest
+- XGBoost
+- CatBoost
+
+### 🏆 Final Selected Model: **Random Forest**
+
+| Metric       | Score             |
+|--------------|-------------------|
+| **ROC-AUC**  | **0.928 ± 0.051** |
+| **Accuracy** | **0.848 ± 0.067** |
+
+- **Why this model?**  
+  Random Forest achieved the highest performance on both ROC-AUC and Accuracy metrics, indicating strong predictive power and generalizability.
+
+- **Training Data:** 31 engineered and encoded features were used for training.
+
+---
+
+## 🧠 Metric Explanations
+
+### 🎯 ROC-AUC (Receiver Operating Characteristic – Area Under Curve)
+
+- Measures the model’s ability to distinguish between churners and non-churners.
+- Particularly useful for imbalanced datasets like churn.
+- Scores interpretation:
+  - 0.5 → No discrimination (random guess)
+  - 1.0 → Perfect discrimination
+  - > 0.8 → Excellent performance
+
+### ✔️ Accuracy
+
+- Measures the proportion of correct predictions.
+- Can be misleading on imbalanced datasets.
+- Best used alongside ROC-AUC to evaluate overall model effectiveness.
+
 
 
 ### 5️⃣ **Model Explanation with SHAP** (`App/shap_helper.py`)
