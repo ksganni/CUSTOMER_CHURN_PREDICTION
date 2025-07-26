@@ -98,8 +98,6 @@ def show_page(model_scores, reference_columns):
         - Measures the percentage of correct predictions overall.
         - Can be misleading if the dataset is imbalanced.
         - That’s why ROC-AUC is often more reliable in churn problems.
-
-    📌 *Tip:* Always look at both ROC-AUC and Accuracy to judge a model's real performance.
     """)
 
     st.markdown("""<hr style="margin: 2rem 0;">""", unsafe_allow_html=True)
