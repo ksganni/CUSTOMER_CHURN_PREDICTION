@@ -262,7 +262,7 @@ Customer-Churn-Prediction/
 | **CatBoost** | - Specialized for categorical features<br>- Reduces need for extensive preprocessing<br>- Built-in overfitting protection |
 
 
-## 📊 Model Evaluation Process
+**📊 Model Evaluation Process**
 
 - **Cross-Validation:** 5-fold cross-validation was used to ensure robust and unbiased performance estimates.
 - **Metrics Used:**
@@ -272,9 +272,7 @@ Customer-Churn-Prediction/
     - > 0.8 → Generally good performance
   - **Accuracy:** Percentage of correctly predicted samples
 
----
-
-## 🎛️ Hyperparameter Tuning
+**🎛️ Hyperparameter Tuning**
 
 - **Technique:** `GridSearchCV` systematically tested combinations of hyperparameters to optimize model performance.
 - **Best Model Tuned:** **Random Forest**
@@ -284,9 +282,7 @@ Customer-Churn-Prediction/
   - `min_samples_split`: [2, 5, 10]
   - `min_samples_leaf`: [1, 2, 4]
 
----
-
-## Model Selection Results
+**Model Selection Results**
 
 The following models were trained and evaluated using 5-fold cross-validation:
 
@@ -296,7 +292,7 @@ The following models were trained and evaluated using 5-fold cross-validation:
 - XGBoost
 - CatBoost
 
-### 🏆 Final Selected Model: **Random Forest**
+**🏆 Final Selected Model: Random Forest**
 
 | Metric       | Score             |
 |--------------|-------------------|
@@ -308,11 +304,10 @@ The following models were trained and evaluated using 5-fold cross-validation:
 
 - **Training Data:** 31 engineered and encoded features were used for training.
 
----
 
-## 🧠 Metric Explanations
+**🧠 Metric Explanations**
 
-### 🎯 ROC-AUC (Receiver Operating Characteristic – Area Under Curve)
+**🎯 ROC-AUC (Receiver Operating Characteristic – Area Under Curve)**
 
 - Measures the model’s ability to distinguish between churners and non-churners.
 - Particularly useful for imbalanced datasets like churn.
@@ -321,12 +316,11 @@ The following models were trained and evaluated using 5-fold cross-validation:
   - 1.0 → Perfect discrimination
   - > 0.8 → Excellent performance
 
-### ✔️ Accuracy
+**✔️ Accuracy**
 
 - Measures the proportion of correct predictions.
 - Can be misleading on imbalanced datasets.
 - Best used alongside ROC-AUC to evaluate overall model effectiveness.
-
 
 
 ### 5️⃣ **Model Explanation with SHAP** (`App/shap_helper.py`)

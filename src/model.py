@@ -28,7 +28,6 @@ def train_models(X_train, y_train):
     for name, model in models.items():
         roc_auc_scores = cross_val_score(model, X_train, y_train, cv=5, scoring="roc_auc")
         accuracy_scores = cross_val_score(model, X_train, y_train, cv=5, scoring="accuracy")
-        
         results[name] = {
             "roc_auc_mean": roc_auc_scores.mean(),
             "roc_auc_std": roc_auc_scores.std(),
