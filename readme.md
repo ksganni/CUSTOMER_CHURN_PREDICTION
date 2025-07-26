@@ -269,7 +269,7 @@ Customer-Churn-Prediction/
   - **ROC-AUC (Receiver Operating Characteristic – Area Under Curve):**
     - 0.5 → Random guessing (no skill)
     - 1.0 → Perfect prediction (ideal, rare)
-    - > 0.8 → Generally good performance
+    - 0.8 → Generally good performance
   - **Accuracy:** Percentage of correctly predicted samples
 
 **🎛️ Hyperparameter Tuning**
