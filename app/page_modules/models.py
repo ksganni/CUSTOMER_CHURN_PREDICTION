@@ -76,7 +76,6 @@ def show_page(model_scores, reference_columns):
     - **Training Features Used:** {len(reference_columns) if reference_columns else 'N/A'} features  
     """)
 
-    st.subheader("📊 All Models Performance Summary with Explanation")
     st.markdown(f"""
     **🔎 Models Performance Summary (ROC-AUC):**
 
