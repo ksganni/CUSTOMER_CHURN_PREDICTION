@@ -464,27 +464,27 @@ Monthly Charges: $78.90
 Total Charges: $1,183.50
 ```
 
-#### ✅ **Low Risk: Ultra Long-Term Loyal Customer**
+#### ✅ **Low Risk: Premium Family Customer**
 ```
 Gender: Male
 Senior Citizen: No
 Partner: Yes
 Dependents: Yes
-Tenure: 36 months
+Tenure: 65 months
 Phone Service: Yes
 Multiple Lines: Yes
-Internet Service: DSL
+Internet Service: Fiber Optic
 Online Security: Yes
 Online Backup: Yes
 Device Protection: Yes
 Tech Support: Yes
-Streaming TV: No
+Streaming TV: Yes
 Streaming Movies: Yes
-Contract: Two Years
+Contract: Two Year
 Paperless Billing: Yes
-Payment Method: Credit Card(Automatic)
-Monthly Charges: $72.40
-Total Charges: $2,606.40
+Payment Method: Bank Transfer(Automatic)
+Monthly Charges: $95.20
+Total Charges: $6188.00
 ```
 
 ---
@@ -528,7 +528,7 @@ Total Charges: $2,606.40
 
 <div align="center">
 
-<img width="1439" height="555" alt="Screenshot 2025-07-09 at 7 52 51 PM" src="https://github.com/user-attachments/assets/9e7c0e09-1a27-451b-87e5-4454e1179539" /><img width="1439" height="593" alt="Screenshot 2025-07-09 at 7 53 21 PM" src="https://github.com/user-attachments/assets/bf195716-dcbc-4464-8033-f646fcc9c8d8" /><img width="1439" height="576" alt="Screenshot 2025-07-09 at 7 53 36 PM" src="https://github.com/user-attachments/assets/631ba123-1c63-4d71-ba04-9b22e5d24837" /><img width="1439" height="459" alt="Screenshot 2025-07-09 at 7 54 08 PM" src="https://github.com/user-attachments/assets/0b35eb26-98ba-42ef-a2e9-b24af0ce8c11" /><img width="1439" height="597" alt="Screenshot 2025-07-09 at 7 54 40 PM" src="https://github.com/user-attachments/assets/7982bec6-8469-48b1-a5f4-2d71d974ec64" /><img width="1439" height="495" alt="Screenshot 2025-07-09 at 7 55 05 PM" src="https://github.com/user-attachments/assets/5547629a-75eb-4daa-9215-d1a6b0d2f67e" /><img width="1439" height="447" alt="Screenshot 2025-07-09 at 7 55 51 PM" src="https://github.com/user-attachments/assets/11260de8-63e6-48ad-912a-91d53cbf861f" /><img width="1439" height="209" alt="Screenshot 2025-07-09 at 7 56 09 PM" src="https://github.com/user-attachments/assets/398f4580-d120-4ed7-b6c2-f81c607033e4" /><img width="1439" height="244" alt="Screenshot 2025-07-09 at 7 56 31 PM" src="https://github.com/user-attachments/assets/af404ce6-e82a-41a5-8131-b1b900faa722" />
+<img width="1439" height="555" alt="Screenshot 2025-07-09 at 7 52 51 PM" src="https://github.com/user-attachments/assets/9e7c0e09-1a27-451b-87e5-4454e1179539" /><img width="1439" height="593" alt="Screenshot 2025-07-09 at 7 53 21 PM" src="https://github.com/user-attachments/assets/bf195716-dcbc-4464-8033-f646fcc9c8d8" /><img width="1439" height="576" alt="Screenshot 2025-07-09 at 7 53 36 PM" src="https://github.com/user-attachments/assets/631ba123-1c63-4d71-ba04-9b22e5d24837" /><img width="1440" height="412" alt="Screenshot 2025-07-31 at 3 02 21 PM" src="https://github.com/user-attachments/assets/a1a2fd39-40c8-418a-9b9e-253ec5df4c31" /><img width="1440" height="592" alt="Screenshot 2025-07-31 at 3 02 53 PM" src="https://github.com/user-attachments/assets/8113d981-b2b4-4e07-8162-b4deaa5daf92" /><img width="1440" height="463" alt="Screenshot 2025-07-31 at 3 03 08 PM" src="https://github.com/user-attachments/assets/bec19ee8-36cb-42b4-ae9a-4d5e703d6e2c" /><img width="1440" height="451" alt="Screenshot 2025-07-31 at 3 03 24 PM" src="https://github.com/user-attachments/assets/904abef5-a4aa-468a-a47c-f95c475a98cc" /><img width="1440" height="189" alt="Screenshot 2025-07-31 at 3 03 39 PM" src="https://github.com/user-attachments/assets/b36c75a3-e197-4f84-81f1-5d4f30305596" /><img width="1440" height="257" alt="Screenshot 2025-07-31 at 3 03 53 PM" src="https://github.com/user-attachments/assets/81f1c8dd-8546-4821-aa91-f6c426737fd8" />
 
 </div>
 
@@ -536,15 +536,15 @@ Total Charges: $2,606.40
 
 <div align="center">
 
-<img width="1439" height="563" alt="Screenshot 2025-07-09 at 7 59 48 PM" src="https://github.com/user-attachments/assets/ea1a5334-755f-4128-8284-d918b68b7aff" /><img width="1439" height="587" alt="Screenshot 2025-07-09 at 8 00 19 PM" src="https://github.com/user-attachments/assets/93a7242e-ac4b-451e-a523-03838057935e" /><img width="1439" height="562" alt="Screenshot 2025-07-09 at 8 00 36 PM" src="https://github.com/user-attachments/assets/0c7806d8-7868-4da2-bcae-bca19eb9fab5" /><img width="1439" height="438" alt="Screenshot 2025-07-09 at 8 00 48 PM" src="https://github.com/user-attachments/assets/1357253e-32dd-4310-9a47-5dc3fc880def" /><img width="1439" height="598" alt="Screenshot 2025-07-09 at 8 01 03 PM" src="https://github.com/user-attachments/assets/09a5618d-ce7a-4671-abd0-359dd6835c35" /><img width="1439" height="460" alt="Screenshot 2025-07-09 at 8 01 40 PM" src="https://github.com/user-attachments/assets/f0a2d6ae-c455-48f4-a41b-7bd33a8c736e" /><img width="1439" height="452" alt="Screenshot 2025-07-09 at 8 02 22 PM" src="https://github.com/user-attachments/assets/b58aa001-3483-4162-8466-27bcac763eb9" /><img width="1439" height="199" alt="Screenshot 2025-07-09 at 8 02 45 PM" src="https://github.com/user-attachments/assets/82848a3f-a204-457b-b553-4687ba1e388e" /><img width="1439" height="208" alt="Screenshot 2025-07-09 at 8 02 58 PM" src="https://github.com/user-attachments/assets/85fb9751-00de-4746-9b4b-719367c00c37" />
+<img width="1439" height="563" alt="Screenshot 2025-07-09 at 7 59 48 PM" src="https://github.com/user-attachments/assets/ea1a5334-755f-4128-8284-d918b68b7aff" /><img width="1439" height="587" alt="Screenshot 2025-07-09 at 8 00 19 PM" src="https://github.com/user-attachments/assets/93a7242e-ac4b-451e-a523-03838057935e" /><img width="1439" height="562" alt="Screenshot 2025-07-09 at 8 00 36 PM" src="https://github.com/user-attachments/assets/0c7806d8-7868-4da2-bcae-bca19eb9fab5" /><img width="1440" height="443" alt="Screenshot 2025-07-31 at 3 07 13 PM" src="https://github.com/user-attachments/assets/dffde107-92b5-4cde-9019-ac0b9dee0088" /><img width="1440" height="592" alt="Screenshot 2025-07-31 at 3 07 28 PM" src="https://github.com/user-attachments/assets/c7a1867c-18a7-4532-bc8e-d7be1c63382d" /><img width="1440" height="456" alt="Screenshot 2025-07-31 at 3 07 45 PM" src="https://github.com/user-attachments/assets/5e7d2335-15a1-43c9-b886-869eb11b1437" /><img width="1440" height="447" alt="Screenshot 2025-07-31 at 3 07 57 PM" src="https://github.com/user-attachments/assets/da25ef8a-33f5-4b62-9e69-c46f5485e878" /><img width="1440" height="203" alt="Screenshot 2025-07-31 at 3 08 13 PM" src="https://github.com/user-attachments/assets/9a49355f-52f4-4257-a364-009853c45af6" /><img width="1440" height="214" alt="Screenshot 2025-07-31 at 3 08 40 PM" src="https://github.com/user-attachments/assets/3a1c1745-58ac-4b0a-9d94-2ee34f99c653" />
 
 </div>
 
-✅ **Low Risk: Stable Family Customer**
+✅ **Low Risk: Established Senior Customer**
 
 <div align="center">
 
-<img width="1439" height="555" alt="Screenshot 2025-07-09 at 8 05 43 PM" src="https://github.com/user-attachments/assets/aafe2df0-0361-4ea1-b3db-b9118fbdc405" /><img width="1439" height="586" alt="Screenshot 2025-07-09 at 8 05 59 PM" src="https://github.com/user-attachments/assets/079ba1d1-f9d2-48d0-a9da-4ac3a81fda2e" /><img width="1439" height="570" alt="Screenshot 2025-07-09 at 8 06 26 PM" src="https://github.com/user-attachments/assets/b095c308-a299-4206-8309-4da194a76141" /><img width="1439" height="446" alt="Screenshot 2025-07-09 at 8 06 39 PM" src="https://github.com/user-attachments/assets/c9318afd-2030-4f61-8c26-2e3125b7d354" /><img width="1439" height="591" alt="Screenshot 2025-07-09 at 8 07 04 PM" src="https://github.com/user-attachments/assets/dc93d62c-15c1-41c5-85a6-da3a85e27f0d" /><img width="1439" height="477" alt="Screenshot 2025-07-09 at 8 07 17 PM" src="https://github.com/user-attachments/assets/c0d91683-7b1a-4ec4-9bc1-eeecc9468c29" /><img width="1439" height="448" alt="Screenshot 2025-07-09 at 8 07 30 PM" src="https://github.com/user-attachments/assets/9a155963-6045-4b0d-9f9e-3de050c994c6" /><img width="1439" height="195" alt="Screenshot 2025-07-09 at 8 07 52 PM" src="https://github.com/user-attachments/assets/8f47caea-cbd7-43e9-a8ab-b50c6797a223" /><img width="1439" height="251" alt="Screenshot 2025-07-09 at 8 08 01 PM" src="https://github.com/user-attachments/assets/3cf2b18e-e3cd-4d37-95de-cd63c57e99bb" />
+<img width="1440" height="555" alt="Screenshot 2025-07-31 at 3 28 02 PM" src="https://github.com/user-attachments/assets/35b74886-a539-4935-afff-a36129ba2076" /><img width="1440" height="587" alt="Screenshot 2025-07-31 at 3 28 17 PM" src="https://github.com/user-attachments/assets/7a35d362-492f-46e1-828b-a60e6b10b57a" /><img width="1440" height="562" alt="Screenshot 2025-07-31 at 3 28 54 PM" src="https://github.com/user-attachments/assets/bded6ea4-8366-4290-a369-2a92df5458cc" /><img width="1440" height="440" alt="Screenshot 2025-07-31 at 3 29 06 PM" src="https://github.com/user-attachments/assets/b1d78f74-f823-43fe-a93a-2c74ef548b67" /><img width="1440" height="595" alt="Screenshot 2025-07-31 at 3 29 21 PM" src="https://github.com/user-attachments/assets/d7660a0a-953a-464b-a614-e12bb8542e54" /><img width="1440" height="475" alt="Screenshot 2025-07-31 at 3 29 33 PM" src="https://github.com/user-attachments/assets/ddaef122-de68-4eb4-9a08-144aa376cb91" /><img width="1440" height="441" alt="Screenshot 2025-07-31 at 3 29 47 PM" src="https://github.com/user-attachments/assets/2153cf4f-2786-42b8-8282-7a37a9f02704" /><img width="1440" height="196" alt="Screenshot 2025-07-31 at 3 29 57 PM" src="https://github.com/user-attachments/assets/d5f4ffb5-62cd-4091-9dce-0367bbcb32a8" /><img width="1440" height="207" alt="Screenshot 2025-07-31 at 3 30 05 PM" src="https://github.com/user-attachments/assets/82578195-4c46-459c-9f00-4d106c8daecd" />
 
 </div>
 
