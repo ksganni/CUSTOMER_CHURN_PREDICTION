@@ -166,27 +166,27 @@ def show_page():
 
     st.markdown("""
     <div style="background: linear-gradient(135deg, #e8f5e8 0%, #e5f2e5 100%); padding: 2rem; border-radius: 10px; margin: 2rem 0;">
-        <h4 style="color: #27ae60; margin-bottom: 0.5rem;">✅ Low Risk: Ultra Long-Term Loyal Customer</h4>
+        <h4 style="color: #27ae60; margin-bottom: 0.5rem;">✅ Low Risk: Premium Family Customer</h4>
         <ul>
             <li>Gender: Male</li>
             <li>Senior Citizen: No</li>
             <li>Partner: Yes</li>
             <li>Dependents: Yes</li>
-            <li>Tenure: 36 months</li>
+            <li>Tenure: 65 months</li>
             <li>Phone Service: Yes</li>
             <li>Multiple Lines: Yes</li>
-            <li>Internet Service: DSL</li>
+            <li>Internet Service: Fiber Optic</li>
             <li>Online Security: Yes</li>
             <li>Online Backup: Yes</li>
             <li>Device Protection: Yes</li>
             <li>Tech Support: Yes</li>
-            <li>Streaming TV: No</li>
+            <li>Streaming TV: Yes</li>
             <li>Streaming Movies: Yes</li>
-            <li>Contract: Two Years</li>
+            <li>Contract: Two Year</li>
             <li>Paperless Billing: Yes</li>
-            <li>Payment Method: Credit Card(Automatic)</li>
-            <li>Monthly Charges: $72.40</li>
-            <li>Total Charges: $2,606.40</li>
+            <li>Payment Method: Bank Transfer(Automatic)</li>
+            <li>Monthly Charges: $95.20</li>
+            <li>Total Charges: $6188.00</li>
         </ul>
     </div>
     """, unsafe_allow_html=True)
